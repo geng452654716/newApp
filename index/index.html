@@ -1,160 +1,183 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
-	<head>
+<head>
 		<meta charset="UTF-8">
-		<title>Softlink</title>
-		<meta name="viewport" content="initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<meta name="x5-orientation" content="portrait">
+		<meta name="x5-fullscreen" content="true">
+		<meta name="screen-orientation" content="portrait" />
+		<meta name="full-screen" content="yes">
+		<meta name="format-detection" content="telephone=no,email=no">
 		<link rel="stylesheet" type="text/css" href="../css/public.css" />
 		<link rel="stylesheet" type="text/css" href="../css/zhibo.css" />
-		<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
-		<script src="https://unpkg.com/better-scroll@1.0.1/dist/bscroll.min.js"></script>
-		<script src="../js/public.js"></script>
-		<script type="text/javascript">
-			document.documentElement.style.fontSize = document.documentElement.clientWidth / 320 * 20 + 'px';
-			onresize = function() {
-				document.documentElement.style.fontSize = document.documentElement.clientWidth / 320 * 20 + 'px';
-			};
+		<title>Softlink</title>
+		<script>
+			(function (deviceWidth, fontSize) {
+				deviceWidth = deviceWidth || 640;
+				fontSize = fontSize || 100;
+				var metas = document.querySelectorAll('meta');
+				var viewPort = [].slice.call(metas).filter((item) => {
+					return item.name === 'viewport';
+				})[0];
+				if (!viewPort) {
+					var meta = document.createElement('meta');
+					meta.name = 'viewport';
+					viewPort = document.head.insertBefore(meta, metas[metas.length - 1].nextElementSibling);
+				}
+				var scale = 1 / window.devicePixelRatio;
+				viewPort.content = `width=device-width, initial-scale=${scale}, maximum-scale=${scale}, minimum-scale=${scale}, user-scalable=no`;
+				var html = document.documentElement;
+				var fn = function () {
+					html.style.fontSize = (html.clientWidth / deviceWidth) * fontSize + 'px';
+				};
+				fn();
+				window.addEventListener('resize', fn);
+			})(750, 50);
 		</script>
-		<script src="../js/index.js" type="text/javascript" charset="utf-8"></script>
-	</head>
+	<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="../js/bscroll.min.js"></script>
+	<script src="../js/public.js"></script>
+	<script src="../js/index.js" type="text/javascript" charset="utf-8"></script>
+</head>
 
-	<body>
+<body>
+	<div class="wrapper">
+		<div class="content">
+			<div class="banner">
+				<div class="ban_tit">
+					本周直播推荐
+				</div>
+				<div class="ban_tu">
+					<img src="../img/tu.jpg" />
+					<div class="ban_shi jijiang">即将开始</div>
+				</div>
+				<div class="ban_zi clear">
+					<a class="ban_zia">教你如何走进世界银行</a>
+					<a class="ban_zib">08-23 19:00</a>
+				</div>
+				<div class="ban_sp">
+					<strong>讲师名</strong>
+					<span>套课：5课时</span>
+					<p>
+						<a class="small">¥</a>0</p>
+				</div>
+				<div class="ban_bao">1000人已报名</div>
+			</div>
+			<div class="gao">
+				<img src="../img/tu.jpg" />
+			</div>
+			<div class="details clear">
+				<div class="zhi_son">
+					<div class="zhi_tu">
+						<img src="../img/tu.jpg">
+						<span class='huifang'>回放</span>
+					</div>
+					<div class="gao_tit">
+						GRE满分女神答题策略
+					</div>
+					<div class="gao_p">
+						08-23 19:00
+					</div>
+					<div class="gao_xin">
+						<span>套课：5课时</span>
+						<p>
+							<a class="small">¥</a>6-
+							<a class="small">¥</a>128</p>
+					</div>
+					<div class="ban_bao">1000人报名</div>
+				</div>
+				<div class="zhi_son">
+					<div class="zhi_tu">
+						<img src="../img/tu.jpg">
+						<span class='huifang'>回放</span>
+					</div>
+					<div class="gao_tit">
+						GRE满分女神答题策略
+					</div>
+					<div class="gao_p">
+						08-23 19:00
+					</div>
+					<div class="gao_xin">
+						<span>套课：5课时</span>
+						<p>
+							<a class="small">¥</a>6-
+							<a class="small">¥</a>128</p>
+					</div>
+					<div class="ban_bao">1000人已报名</div>
+				</div>
+				<div class="zhi_son">
+					<div class="zhi_tu">
+						<img src="../img/tu.jpg">
+						<span class='huifang'>回放</span>
+					</div>
+					<div class="gao_tit">
+						GRE满分女神答题策略
+					</div>
+					<div class="gao_p">
+						08-23 19:00
+					</div>
+					<div class="gao_xin">
+						<span>套课：5课时</span>
+						<p>
+							<a class="small">¥</a>6-
+							<a class="small">¥</a>128</p>
+					</div>
+					<div class="ban_bao">1000人已报名</div>
+				</div>
+				<div class="zhi_son">
+					<div class="zhi_tu">
+						<img src="../img/tu.jpg">
+						<span class='huifang'>回放</span>
+					</div>
+					<div class="gao_tit">
+						GRE满分女神答题策略
+					</div>
+					<div class="gao_p">
+						08-23 19:00
+					</div>
+					<div class="gao_xin">
+						<span>套课：5课时</span>
+						<p>
+							<a class="small">¥</a>6-
+							<a class="small">¥</a>128</p>
+					</div>
+					<div class="ban_bao">1000人已报名</div>
+				</div>
+			</div>
+
+		</div>
 		<div class="head">
 			<div class="head_sou">
 				搜索
 			</div>
 		</div>
-		<div class="wrapper">
-			<div class="content">
-
-				<div class="banner">
-					<div class="ban_tit">
-						本周直播推荐
-					</div>
-					<div class="ban_tu">
-						<img src="../img/tu.jpg" />
-						<div class="ban_shi">即将开始</div>
-					</div>
-					<div class="ban_zi">
-						<a class="ban_zia">教你如何走进世界银行</a>
-						<a class="ban_zib">2017-08-23 19：00</a>
-					</div>
-					<div class="ban_sp">
-						<span>套课：5课时</span>
-						<p>
-							<a class="small">¥</a>0</p>
-					</div>
-					<div class="ban_bao">1000人已报名</div>
-				</div>
-				<div class="gao">
-					<img src="../img/tu.jpg" />
-				</div>
-				<div class="details">
-					<div class="zhi_son">
-						<div class="zhi_tu">
-							<img src="../img/tu.jpg">
-							<span>回放</span>
-						</div>
-						<div class="gao_tit">
-							GRE满分女神答题策略
-						</div>
-						<div class="gao_p">
-							08-23 19:00
-						</div>
-						<div class="gao_xin">
-							<span>套课：5课时</span>
-							<p>
-								<a class="small">¥</a>6-
-								<a class="small">¥</a>128</p>
-						</div>
-						<div class="ban_bao">1000人已报名</div>
-					</div>
-					<div class="zhi_son">
-						<div class="zhi_tu">
-							<img src="../img/tu.jpg">
-							<span>回放</span>
-						</div>
-						<div class="gao_tit">
-							GRE满分女神答题策略
-						</div>
-						<div class="gao_p">
-							08-23 19:00
-						</div>
-						<div class="gao_xin">
-							<span>套课：5课时</span>
-							<p>
-								<a class="small">¥</a>6-
-								<a class="small">¥</a>128</p>
-						</div>
-						<div class="ban_bao">1000人已报名</div>
-					</div>
-					<div class="zhi_son">
-						<div class="zhi_tu">
-							<img src="../img/tu.jpg">
-							<span>回放</span>
-						</div>
-						<div class="gao_tit">
-							GRE满分女神答题策略
-						</div>
-						<div class="gao_p">
-							08-23 19:00
-						</div>
-						<div class="gao_xin">
-							<span>套课：5课时</span>
-							<p>
-								<a class="small">¥</a>6-
-								<a class="small">¥</a>128</p>
-						</div>
-						<div class="ban_bao">1000人已报名</div>
-					</div>
-					<div class="zhi_son">
-						<div class="zhi_tu">
-							<img src="../img/tu.jpg">
-							<span>回放</span>
-						</div>
-						<div class="gao_tit">
-							GRE满分女神答题策略
-						</div>
-						<div class="gao_p">
-							08-23 19:00
-						</div>
-						<div class="gao_xin">
-							<span>套课：5课时</span>
-							<p>
-								<a class="small">¥</a>6-
-								<a class="small">¥</a>128</p>
-						</div>
-						<div class="ban_bao">1000人已报名</div>
-					</div>
-				</div>
-
-			</div>
-		</div>
-		<footer>
-			<dl>
-				<a href="index.html">
-					<dt><img src="../img/zhi.png"></dt>
-					<dd class="blue">直播</dd>
-				</a>
-			</dl>
-			<dl>
-				<a href="mall.html">
-					<dt><img src="../img/shan.png"></dt>
-					<dd>商城</dd>
-				</a>
-			</dl>
-			<dl>
-				<dt><img src="../img/study.png"></dt>
-				<dd>学习</dd>
-			</dl>
-			<dl>
-				<a href="our.html">
-					<dt><img src="../img/personal.png"></dt>
-					<dd>我的</dd>
-				</a>
-			</dl>
-		</footer>
-	</body>
+	</div>
+	<footer>
+		<dl>
+			<a href="index.html">
+				<dt><img src="../img/zhi.png"></dt>
+				<dd class="blue">直播</dd>
+			</a>
+		</dl>
+		<dl>
+			<a href="mall.html">
+				<dt><img src="../img/shan.png"></dt>
+				<dd>商城</dd>
+			</a>
+		</dl>
+		<dl>
+			<dt><img src="../img/study.png"></dt>
+			<dd>学习</dd>
+		</dl>
+		<dl>
+			<a href="our.html">
+				<dt><img src="../img/personal.png"></dt>
+				<dd>我的</dd>
+			</a>
+		</dl>
+	</footer>
+</body>
 
 </html>

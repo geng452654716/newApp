@@ -1,255 +1,278 @@
-html,body{
-    height: 100%;
+html,
+body {
+  height: 100%;
 }
-.wrapper{
-    height: 100%;
+.wrapper {
+  height: 100%;
 }
-.head{
-     width: 100%;
-     height: 2.0217391304347827rem;
-     position: fixed;
-     top: 0;
-     left: 0;
-     background: white;
-     z-index: 2;
-     box-shadow: 0px 2px 0.426666rem 0px rgba(66, 133, 244, 0.2);
+.clear::after {
+  content: '';
+  display: block;
+  clear: both;
 }
- .head_sou{
-     width: 14.565217391304348rem;
-     height: 1.3043478260869565rem;
-     text-indent: 1.46rem;
-     border-radius: 0.6086956521739131rem;
-     position: absolute;
-     background:#f0f0f0 url(../img/currency.png) no-repeat 0.5rem -4.65rem;
-     background-size: 0.87rem;
-     top: 50%;
-     left: 50%;
-     overflow: hidden;
-     margin-left: -7.282608695652174rem;
-     margin-top: -0.6521739130434783rem;
-     color: #999;
-     font-size: 0.6521739130434783rem;
-     line-height: 1.3043478260869565rem;
+.head {
+  width: 100%;
+  height: 1.88rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: white;
+  z-index: 2;
+  box-shadow: 0rem 0.04rem 0.4rem 0rem rgba(66, 133, 244, 0.2);
 }
- .banner{
-     margin: 0 auto;
-     box-shadow: 0px 2px 0.426666rem 0px rgba(66, 133, 244, 0.2);margin-top:2.5869565217391304rem;
-     width: 15.217391304347826rem;
-     height: 13.782608695652174rem;
-     border-radius: 0.1956521739130435rem;
+.head_sou {
+  width: 13.66rem;
+  height: 1.22rem;
+  text-indent: 1.36rem;
+  border-radius: 0.58rem;
+  position: absolute;
+  background: #f0f0f0 url(../img/currency.png) no-repeat 0.46rem -4.36rem;
+  background-size: 0.82rem;
+  top: 50%;
+  left: 50%;
+  overflow: hidden;
+  margin-left: -6.82rem;
+  margin-top: -0.6rem;
+  color: #999;
+  font-size: 0.6rem;
+  line-height: 1.22rem;
 }
- .ban_tit{
-    height: 1.9565217391304348rem;
-    width: 100%;
-    text-indent: 1rem;
-    line-height: 1.9565217391304348rem;
-    color: #1a1a1a;
-    font-size: 0.6956521739130435rem;
-    background: url(../img/currency.png) no-repeat 0.2rem -4.93rem;
-    background-size: 0.76rem;
+.banner {
+  margin: 0 auto;
+  box-shadow: 0rem 0.04rem 0.4rem 0rem rgba(66, 133, 244, 0.2);
+  margin-top: 2.42rem;
+  width: 14rem;
+  border-radius: 0.18rem;
 }
- .ban_tu{
-     width: 15.217391304347826rem;
-     margin: 0 auto;
-     height: 7.369565217391305rem;
-     position: relative;
-     overflow: hidden;
-     border-radius: 0.1956521739130435rem;
+.ban_tit {
+  height: 1.84rem;
+  width: 100%;
+  text-indent: 0.92rem;
+  line-height: 1.84rem;
+  color: #4d4d4d;
+  font-size: 0.64rem;
+  background: url(../img/currency.png) no-repeat 0.18rem -4.66rem;
+  background-size: 0.72rem;
+  font-weight: 600;
 }
- .ban_tu>img{
-     width: 100%;
-     height: auto;
+.ban_tu {
+  width: 14rem;
+  margin: 0 auto;
+  height: 6.9rem;
+  position: relative;
+  overflow: hidden;
 }
- .ban_shi{
- 	text-indent: 0.67rem;
-     width: 2.847826086956522rem;
-     height: 0.782608695652174rem;
-     line-height: 0.782608695652174rem;
-     color: white;
-     border-radius: 0.192rem;
-     font-size: 0.4782608695652174rem;
-     border: 1px solid rgba(255,255,255,.3);
-      background: rgba(0,0,0,.3) url(../img/currency.png) no-repeat 0.2rem -0.8rem;
-      background-size: 0.45rem;
-     position: absolute;
-     top: 0.4693333333333333rem;
-     right: 0.34782608695652173rem;
+.ban_tu > img {
+  width: 100%;
+  height: auto;
 }
- .ban_zi{
-     width: 100%;
-     height: 1.7391304347826086rem;
-     overflow: hidden;
+.ban_shi {
+  text-indent: 0.62rem;
+  width: 2.66rem;
+  height: 0.76rem;
+  line-height: 0.74rem;
+  color: white;
+  border-radius: 0.38rem;
+  font-size: 0.44rem;
+  border: 0.02rem solid rgba(255, 255, 255, 0.3);
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 0.18rem;
+  right: 0.14rem;
 }
- .ban_zia,.ban_zib{
-     height: 100%;
-     line-height: 1.7391304347826086rem;
+.huifang {
+  background: url(../img/huifang.png) no-repeat rgba(0, 0, 0, 0.3) 0.32rem 0.2rem;
+  background-size: 0.2rem 0.3rem;
 }
- .ban_zia{
-     width: 9.347826086956522rem;
-     font-size: 0.6521739130434783rem;
-     color: #4c4c4c;
-     float: left;
-     text-indent: 0.34782608695652173rem;
-     text-overflow: ellipsis;
-     overflow: hidden;
-     white-space: nowrap;
+.jijiang {
+  background: url(../img/biao.png) no-repeat rgba(0, 0, 0, 0.3) 0.14rem 0.22rem;
+  background-size: 0.36rem 0.36rem;
 }
- .ban_zib{
-     width: 4.260869565217392rem;
-     font-size: 0.4782608695652174rem;
-     color: #999999;
-     float: right;
-     margin-right: 0.34782608695652173rem;
+.ban_zia,
+.ban_zib {
+  height: 100%;
+  line-height: 1rem;
 }
- .ban_sp{
-     height: 1.2608695652173914rem;
-     width: 100%;
-     border-bottom: 0.021739130434782608rem solid #f0f0f0;
+.ban_zia {
+  width: 6.4rem;
+  font-size: 0.6rem;
+  color: #4c4c4c;
+  float: left;
+  text-indent: 0.34rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  line-height: 1rem;
+  height: 1rem;
+  margin-top: 0.4rem;
 }
- .ban_sp>span{
-     float: left;
-     width: 2.5652173913043477rem;
-     height: 0.7391304347826086rem;
-     text-align: center;
-     line-height: 0.7391304347826086rem;
-     color: #4285f4;
-     border: 1px solid #4285f4;
-     border-radius: 0.08695652173913043rem;
-     margin-left: 0.34782608695652173rem;
-     font-size: 0.43478260869565216rem;
+.ban_zib {
+  font-size: 0.44rem;
+  color: #666;
+  float: right;
+  margin-right: 0.34rem;
+  margin-top: 0.4rem;
 }
- .ban_sp>p{
-     float: right;
-     margin-right: 0.34782608695652173rem;
-     font-size: 0.9565217391304348rem;
-     color: #ffa100;
+.ban_sp {
+  height: 0.72rem;
+  width: 100%;
+  border-bottom: 0.1rem solid #f0f0f0;
+  margin-top: 0.2rem;
+  padding-bottom: 0.44rem;
 }
- .ban_bao{
-    width: 100%;
-    text-indent: 0.7rem;
-    height: 1.4565217391304348rem;
-    line-height: 1.4565217391304348rem;
-    font-size: 0.43478260869565216rem;
-    color: #999999;
-    background:url(../img/currency.png) no-repeat 0.2rem -5.82rem;
-    background-size: 0.51rem;
+.ban_sp > span {
+  float: left;
+  width: 2.6rem;
+  height: 0.76rem;
+  text-align: center;
+  line-height: 0.76rem;
+  color: #4285f4;
+  border: 0.02rem solid #4285f4;
+  border-radius: 0.1rem;
+  margin-left: 0.14rem;
+  font-size: 0.4rem;
+  box-sizing: border-box;
+  display: inline-block;
 }
- .gao{
-     width: 15.217391304347826rem;
-     margin: 0 auto;
-     border-radius: 0.1956521739130435rem;
-     height: 6.086956521739131rem;
-     margin-top: 0.53333333rem;
-     overflow: hidden;
-     box-shadow: 0px 2px 0.426666rem 0px rgba(66, 133, 244, 0.2);
+.ban_sp > strong {
+  color: #999;
+  font-size: 0.44rem;
+  float: left;
+  padding-left: 0.34rem;
+  font-weight: normal;
+  line-height: 0.76rem;
 }
- .gao>img{
-     width: 100%;
-     height: 100%;
+.ban_sp > p {
+  float: right;
+  margin-right: 0.34rem;
+  font-size: 0.84rem;
+  color: #ffa100;
+  line-height: 0.76rem;
 }
- .details{
-     width: 15.217391304347826rem;
-     margin: 0 auto;
-     overflow: hidden;
-     padding-bottom: 5.1739130434782608rem;
+.ban_bao {
+  width: 100%;
+  text-indent: 0.9rem;
+  height: 1.32rem;
+  line-height: 1.32rem;
+  font-size: 0.4rem;
+  color: #999999;
+  background: url(../img/index_ren.png) no-repeat center left 0.3rem;
+  background-size: 0.4rem;
 }
- .zhi_son{
- 	box-shadow: 0px 2px 0.426666rem 0px rgba(66, 133, 244, 0.2);
-     width: 7.391304347826087rem;
-     height: 9.73913043478261rem;
-     float: left;
-     border-radius: 0.1956521739130435rem;
-     margin-top: 0.43478260869565216rem;
-     overflow: hidden;
+.gao {
+  width: 14rem;
+  margin: 0 auto;
+  border-radius: 0.16rem;
+  height: 5.6rem;
+  margin-top: 0.46rem;
+  overflow: hidden;
+  box-shadow: 0rem 0.12rem 0.4rem 0rem rgba(96, 143, 221, 0.3);
+  margin-bottom: 0.54rem;
 }
- .details .zhi_son:nth-child(2n){
-     margin-left: 0.43478260869565216rem;
+.gao > img {
+  width: 100%;
+  height: 100%;
 }
- .zhi_tu{
-     width: 100%;
-     height: 4.782608695652174rem;
-     position: relative;
-     overflow: hidden;
+.details {
+  width: 14rem;
+  margin: 0 auto;
+  padding-bottom: 5.2rem;
 }
- .zhi_tu span{
- 	text-indent: 0.6rem;
-     width: 1.8695652173913044rem;
-     height: 0.6956521739130435rem;
-     border:1px solid rgba(255,255,255,.3);
-     line-height: 0.6956521739130435rem;
-     position: absolute;
-     top: 0.34782608695652173rem;
-     right: 0.34782608695652173rem;
-     font-size: 0.391304347826087rem;
-     color: white;
-     border-radius: 0.30434782608695654rem;
-     background: rgba(0,0,0,.3) url(../img/currency.png) no-repeat 0.2rem -0.74rem;
-      background-size: 0.4rem;
+.zhi_son {
+  box-shadow: 0rem 0.12rem 0.4rem 0rem rgba(66, 133, 244, 0.26);
+  width: 6.8rem;
+  height: 8.5rem;
+  float: left;
+  border-radius: 0.16rem;
+  overflow: hidden;
+  margin-bottom: 0.4rem;
 }
- .zhi_tu span>img{
-     width: 0.21739130434782608rem;
-     height: 0.32608695652173914rem;
-     vertical-align: middle;
+.details .zhi_son:nth-child(2n) {
+  margin-left: 0.4rem;
 }
- .gao_tit{
-     width: 6.695652173913044rem;
-     height: 1rem;
-     margin: 0 auto;
-     line-height: 1.5rem;;
-     overflow: hidden;
-     text-overflow: ellipsis;
-     white-space: nowrap;
-     font-size: 0.6086956521739131rem;
-     color: #333333;
+.zhi_tu {
+  width: 100%;
+  height: 4.4rem;
+  position: relative;
+  overflow: hidden;
 }
- .gao_p{
-     width: 6.695652173913044rem;
-     height: 1.1521739130434783rem;
-     margin: 0 auto;
-     font-size: 0.4782608695652174rem;
-     color: #666666;
-     line-height: 1.1521739130434783rem;
+.zhi_tu span {
+  text-indent: 0.64rem;
+  width: 1.76rem;
+  height: 0.68rem;
+  border: 0.02rem solid rgba(255, 255, 255, 0.3);
+  line-height: 0.68rem;
+  position: absolute;
+  top: 0.34rem;
+  right: 0.34rem;
+  font-size: 0.4rem;
+  color: white;
+  border-radius: 1.5rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
 }
- .gao_xin{
-     height: 1.2608695652173914rem;
-     width: 6.695652173913044rem;
-     margin: 0 auto;
-     border-bottom: 0.021739130434782608rem solid #f0f0f0;
+.gao_tit {
+  height: 0.86rem;
+  margin: 0 auto;
+  line-height: 0.86rem;
+  margin-top: 0.24rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 0.56rem;
+  color: #333333;
+  padding-left: 0.3rem;
+  box-sizing: border-box;
 }
- .gao_xin>span{
-     float: left;
-     width: 2.3043478260869565rem;
-     height: 0.6521739130434783rem;
-     text-align: center;
-     line-height: 0.6521739130434783rem;
-     color: #4285f4;
-     border: 1px solid #4285f4;
-     border-radius: 0.08695652173913043rem;
-     font-size: 0.391304347826087rem;
+.gao_p {
+  height: 0.7rem;
+  font-size: 0.44rem;
+  color: #666666;
+  line-height: 0.7rem;
+  padding-left: 0.3rem;
 }
- .gao_xin>p{
-     float: right;
-     margin-right: 0.34782608695652173rem;
-     font-size: 0.8260869565217391rem;
-     color: #ffa100;
+.gao_xin {
+  height: 1.12rem;
+  margin: 0 auto;
+  border-bottom: 0.06rem solid #f0f0f0;
+  padding-left: 0.3rem;
+  padding-top: 0.18rem;
+  box-sizing: border-box;
 }
- .gao_xin>.small{
-     font-size: 0.4782608695652174rem;
+.gao_xin > span {
+  float: left;
+  width: 2.16rem;
+  height: 0.62rem;
+  text-align: center;
+  line-height: 0.62rem;
+  color: #4285f4;
+  border: 0.02rem solid #4285f4;
+  border-radius: 0.1rem;
+  font-size: 0.36rem;
 }
- .gao_guan{
-    width: 6.695652173913044rem;
-    text-indent: 0.5826086956521739rem;
-    margin: 0 auto;
-    height: 1.2608695652173914rem;
-    line-height: 1.2608695652173914rem;
-    font-size: 0.43478260869565216rem;
-    color: #808080;
-    background: white url(../img/currency.png) no-repeat -0rem -6.07rem;
-    background-size: 0.6rem;
+.gao_xin > p {
+  float: right;
+  margin-right: 0.14rem;
+  font-size: 0.6rem;
+  color: #ffa100;
+  line-height: 0.6rem;
 }
-footer{
-    position: fixed;
-    left: 0;
-    bottom: 0;
+.gao_xin > .small {
+  font-size: 0.44rem;
 }
- 
+.gao_guan {
+  width: 2.68rem;
+  text-indent: 0.24rem;
+  margin: 0 auto;
+  height: 0.5rem;
+  line-height: 0.5rem;
+  font-size: 0.18rem;
+  color: #808080;
+  background: #ffffff url(../img/currency.png) no-repeat 0rem -2.428rem;
+  background-size: 0.24rem;
+}
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
