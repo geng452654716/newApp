@@ -1,0 +1,68 @@
+@base:50rem;
+@blue:#4285f4;
+.clear::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+body,html{
+    height: 100%;
+    width: 100%;
+}
+.wrapper{
+    height: 100%;
+    overflow-x: hidden;
+}
+
+//编辑列表
+li::after{
+    content: '';
+    clear: both;
+}
+ul{
+    padding-left: 30/@base;
+}
+li{
+    padding-right: 100/@base;
+    border-bottom: 2/@base solid #f3f3f3;
+    height: 102/@base;
+    box-sizing: border-box;
+    line-height: 102/@base;
+    background: url(../img/more_hui.png) no-repeat  right 42/@base center ;
+    background-size: 19/@base 32/@base;
+    .name{
+        float: left;
+        font-size: 32/@base;
+        color:#101010;
+    }
+    .cont{
+        float:right;
+        font-size: 30/@base;
+        color: #8c8c8c;
+    }
+}
+.tx{
+    height: 193/@base;
+    line-height: 193/@base;
+    .cont{
+        width: 110/@base;
+        height: 110/@base;
+        border: 2/@base solid #d4d4d8;
+        background: orange;
+        border-radius: 50%;
+        margin-top: 40/@base;
+        overflow: hidden;
+    }
+}
+.button{
+    height: 96/@base;
+    width: 690/@base;
+    line-height: 96/@base;
+    text-align: center;
+    margin: 0 auto;
+    color: #fff;
+    background: @blue;
+    margin-top: 120/@base;
+    font-size: 34/@base;
+    border-radius: 5/@base;
+}

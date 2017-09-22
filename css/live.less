@@ -1,0 +1,282 @@
+@base:50rem;
+@blue:#4285f4;
+body{
+    background: #f4f7fd;
+}
+.clear::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+body,html{
+    height: 100%;
+}
+.wrapper{
+    height: 100%;
+}
+//视屏播放器
+.videoWarp{
+    height: 420/@base;
+    background: #191919;
+    position: relative;
+    video{
+        height: 420/@base;
+    }
+    .prompt{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        font-size:34/@base;
+        color: #fff;
+        height: 60/@base;
+        line-height: 60/@base;
+        span{
+            color: @blue;
+            font-size: 48/@base;
+        }
+    }
+}
+//老师介绍
+.teacher_warp{
+    padding:30/@base 30/@base 40/@base;
+    background: #fff;
+    box-shadow: 0/@base 5/@base 25/@base 0/@base rgba(96, 143, 221, 0.2);
+    .title{
+        font-size: 30/@base;
+        position: relative;
+        padding-left: 20/@base;
+        line-height: 36/@base;
+    }
+    .title::before{
+        position: absolute;
+        height: 36/@base;
+        width: 6/@base;
+        background: @blue;
+        content: '';
+        left: 0;
+        top: 0;
+    }
+    .teacher{
+        margin-top: 30/@base;
+    }
+    .tx{
+        height: 130/@base;
+        width: 130/@base;
+        background: @blue;
+        margin-right: 20/@base;
+        float: left;
+        border-radius: 50%;
+        overflow: hidden;
+        img{
+            border-radius: 50%;
+        }
+    }
+    .name{
+        padding-top: 15/@base;
+        color: #424242;
+        float: left;
+        h4{
+            font-weight: normal;
+            font-size: 26/@base;
+            display: block;
+            line-height: 45/@base;
+        }
+        span{
+            font-size: 26/@base;
+            display: block;
+            line-height: 45/@base;
+        }
+    }
+    .guanzhu{
+        float:right;
+        width: 130/@base;
+        height: 56/@base;
+        border: 2/@base solid @blue;
+        border-radius: 8/@base;
+        line-height: 56/@base;
+        text-align: center;
+        font-size: 30/@base;
+        color: @blue;
+        margin-top: 37/@base;
+    }
+}
+//导航
+.nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 30/@base;
+    padding: 0 30/@base;
+    background: #fff;
+    height: 120/@base;
+    line-height: 120/@base;
+    position: relative;
+    box-shadow: 0/@base 5/@base 25/@base 0/@base rgba(96, 143, 221, 0.2);
+    margin: 20/@base 0;
+    .active{
+        color: @blue;
+        position: relative;
+    }
+    .active::after{
+        content: '';
+        position: absolute;
+        left:0;
+        bottom: 18/@base;;
+        background: @blue;
+        width: 126/@base;
+        height: 4/@base;
+    }
+}
+//课程内容
+.class_content{
+    min-height: 485/@base;
+    background: #fff;
+    padding: 0 30/@base;
+    color: #424242;
+    .title{
+        line-height: 90/@base;
+        font-size: 30/@base;
+    }
+    li{
+        color: #808080;
+        font-size: 26/@base;
+        span{
+            display: block;
+            line-height: 47/@base;
+            float: left;
+            margin-right: 18/@base;
+        }
+        p{
+            width: 580/@base;
+            float:left;
+            line-height: 47/@base;
+        }
+    }
+    li:after{
+        content: '';
+        display: block;
+        clear: both;
+    }
+}
+//课程列表
+.class_list{
+    background: #fff;
+    padding-bottom: 194/@base;
+    display: none;
+    ul{
+        box-shadow: 0/@base 5/@base 25/@base 0/@base rgba(96, 143, 221, 0.2);
+    }
+    li{
+        padding: 30/@base;
+        position: relative;
+        border-bottom: 2/@base solid #dedede; 
+        p{
+            color: #424242;
+            font-size: 30/@base;
+            line-height: 54/@base;
+        }
+        .small_icon{
+            display: block;
+            line-height: 37/@base;
+            font-size: 22/@base;
+            color: #808080;
+        }
+        time{
+            background: url(../img/zhibo_bo.png) no-repeat left center;
+            background-size: 20px 20px;
+        }
+        span{
+            background: url(../img/zhibo_ren.png) no-repeat left center;
+            background-size: 20px 20px; 
+        }
+        span,time{
+            margin-right: 53/@base;
+            padding-left: 35/@base;
+            font-size: 22/@base;
+        }
+    }
+    li:last-child{
+        border: none;
+    }
+    .active{
+        p{
+            color: @blue;
+        }
+        .startPlay{
+            background: url(../img/yes.png) no-repeat;
+            background-size: 40/@base 40/@base;
+        }
+    }
+    .startPlay{
+        height: 40/@base;
+        width: 40/@base;
+        border-radius: 50%;
+        background: url(../img/no.png) no-repeat;
+        background-size: 40/@base 40/@base;
+        position: absolute;
+        right: 30/@base;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+//课程公告
+.class_notice{
+    display: none;
+    .title{
+        line-height: 88/@base;
+        font-size: 30/@base;
+        color: #424242;
+    }
+    .notice{
+        margin-bottom: 20/@base;
+        box-shadow: 0/@base 5/@base 25/@base 0/@base rgba(96, 143, 221, 0.2);
+        padding: 0 30/@base 40/@base;
+        background: #fff;
+        p{
+            line-height: 45/@base;
+            color: #808080;
+            font-size: 26/@base;
+            margin-bottom: 50/@base;
+        }
+        .saoma{
+            .imgWarp{
+                height: 200/@base;
+                width: 200/@base;
+                background: @blue;
+                margin: 0 auto;
+            }
+            span{
+                font-size: 28/@base;
+                color: #424242;
+                text-align: center;
+                display: block;
+                margin-top: 40/@base;
+            }
+        }
+    }
+    .xuzhi{
+        background: #fff;
+        padding: 0 30/@base 100/@base;
+        li{
+            color: #808080;
+            font-size: 26/@base;
+            span{
+                display: block;
+                line-height: 47/@base;
+                float: left;
+                margin-right: 18/@base;
+            }
+            p{
+                width: 580/@base;
+                float:left;
+                line-height: 47/@base;
+            }
+        }
+        li:after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+    }
+}

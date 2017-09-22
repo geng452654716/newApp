@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="screen-orientation" content="portrait" />
+    <meta name="full-screen" content="yes">
+    <meta name="format-detection" content="telephone=no,email=no">
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/userdata.css">
+    <title>Softlink</title>
+    <script>
+        (function (deviceWidth, fontSize) {
+            deviceWidth = deviceWidth || 640;
+            fontSize = fontSize || 100;
+            var metas = document.querySelectorAll('meta');
+            var viewPort = [].slice.call(metas).filter((item) => {
+                return item.name === 'viewport';
+            })[0];
+            if (!viewPort) {
+                var meta = document.createElement('meta');
+                meta.name = 'viewport';
+                viewPort = document.head.insertBefore(meta, metas[metas.length - 1].nextElementSibling);
+            }
+            var scale = 1 / window.devicePixelRatio;
+            viewPort.content = `width=device-width, initial-scale=${scale}, maximum-scale=${scale}, minimum-scale=${scale}, user-scalable=no`;
+            var html = document.documentElement;
+            var fn = function () {
+                html.style.fontSize = (html.clientWidth / deviceWidth) * fontSize + 'px';
+            };
+            fn();
+            window.addEventListener('resize', fn);
+        })(750, 50);
+    </script>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://unpkg.com/better-scroll@1.0.1/dist/bscroll.min.js"></script>
+    <script src="../js/public.js"></script>
+    <script src="../js/userdata.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="content">
+            <ul>
+                <li class="tx">
+                    <div class="name">头像</div>
+                    <div class="cont">
+                        <img src="../img/tu.jpg" alt="">
+                    </div>
+                </li>
+                <li class="edit name">
+                    <div class="name">昵称</div>
+                    <div class="cont">昵称 昵称</div>
+                </li>
+                <li class="edit school">
+                    <div class="name">毕业／在读院校</div>
+                    <div class="cont">北京大学</div>
+                </li>
+                <li class="edit major">
+                    <div class="name">专业</div>
+                    <div class="cont">金融工程</div>
+                </li>
+                <li class="edit email">
+                    <div class="name">邮箱</div>
+                    <div class="cont">1234qwer@163.com</div>
+                </li>
+            </ul>
+            <div class="button">保存</div>
+        </div>
+    </div>
+</body>
+
+</html>

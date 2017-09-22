@@ -1,0 +1,14 @@
+$(function(){
+	$(document).on("click",".banner",function(){
+		window.location.href="../index/broadcast.html"
+	})
+	$(document).on("click",".zhi_son",function(){
+		window.location.href="../index/broadcast.html"
+	})
+	$(document).on("click",".head_sou",function(){
+		window.location.href="search.html"
+	})
+	$(document).on("click",".gao",function(){
+		window.location.href="free.html"
+	})
+})

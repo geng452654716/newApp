@@ -1,0 +1,143 @@
+@base:50rem;
+@blue:#4285f4;
+.clear::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+body,html{
+    height: 100%;
+    width: 100%;
+}
+.wrapper{
+    height: 100%;
+    overflow-x: hidden;
+}
+
+// 用户头像
+.user{
+    height: 310/@base;
+    padding: 100/@base 46/@base 0;
+    box-sizing: border-box;
+    background: orange;
+    position: relative;
+    background: url('../img/user_bg.png');
+    background-size: 100% 100%;
+    .tx{
+        width: 130/@base;
+        height: 130/@base;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 3/@base solid #fff;
+        box-sizing: border-box;
+        background: yellow;
+        margin-right: 30/@base;
+        float: left;
+    }
+    .name{
+        line-height: 68/@base;
+        color: #fff;
+        font-size: 30/@base;
+    }
+    .small_icon{
+        line-height: 26/@base;
+        color: #fff;
+        font-size: 22/@base;
+        span{
+            padding-left: 40/@base;
+            position: relative;
+        }
+        span:nth-of-type(1)::after{
+            position: absolute;
+            content: '';
+            left: 87/@base;
+            top: 0;
+            height: 26/@base;
+            width: 2/@base;
+            background: #fff;
+        }
+        .follow{
+            background: url('../img/guanzhu.png') no-repeat;
+            background-size: 30/@base 25/@base;
+            margin-right: 25/@base;
+        }
+        .day{
+            padding-left: 56/@base;
+            background: url('../img/book.png') no-repeat 20/@base center;;
+            background-size: 26/@base 25/@base;
+        }
+    }
+    .jt{
+        position: absolute;
+        right: 46/@base;
+        top: 126/@base;
+        color: #fff;
+        background: url('../img/more_bai.png') no-repeat;
+        background-size: 100% 100%;
+        width: 19/@base;
+        height: 32/@base;
+    }
+}
+//讲师列表
+.teacherList{
+    padding-bottom: 50/@base;
+    background: #fff;
+    ul{
+        padding-left: 50/@base;
+        padding-right: 15/@base;
+        overflow: hidden;
+        padding-bottom: 15/@base;
+        box-shadow: 2.5/@base 4.33/@base 25/@base 0/@base rgba(96, 143, 221, 0.2);
+    }
+    li{
+        height: 142/@base;
+        box-sizing: border-box;
+        position: relative;
+        width: 9999/@base; 
+        border: 2/@base solid #fbfbfb;
+        position: relative;
+    }
+    .info{
+        float: left;
+        margin-right: 15/@base;
+        margin-top: 20/@base;
+        .name{
+            line-height: 56/@base;
+            color: #101010;
+            font-size: 32/@base;
+        }
+        p{
+            width: 567/@base;
+            line-height: 33/@base;
+            color: #808080;
+            font-size: 28/@base;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow:ellipsis;
+        }
+    }
+    .button{
+        height: 142/@base;
+        width: 121/@base;
+        padding-top: 22/@base;
+        background: #f69f07;
+        color: #fff;
+        text-align: center;
+        line-height: 45/@base;
+        float: left;
+        font-size: 32/@base;
+        box-sizing: border-box;
+        float: left;
+    }
+    .tx{
+        margin-top: 20/@base;
+        height: 100/@base;
+        width: 100/@base;
+        margin-right: 20/@base;
+        border-radius: 50%;
+        overflow: hidden;
+        float: left;
+        background: orange;
+    }
+}
+  

@@ -1,0 +1,136 @@
+.clear::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+body,
+html {
+  height: 100%;
+  width: 100%;
+}
+.wrapper {
+  height: 100%;
+  overflow-x: hidden;
+}
+.user {
+  height: 6.2rem;
+  padding: 2rem 0.92rem 0;
+  box-sizing: border-box;
+  background: orange;
+  position: relative;
+  background: url('../img/user_bg.png');
+  background-size: 100% 100%;
+}
+.user .tx {
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 0.06rem solid #ffffff;
+  box-sizing: border-box;
+  background: yellow;
+  margin-right: 0.6rem;
+  float: left;
+}
+.user .name {
+  line-height: 1.36rem;
+  color: #fff;
+  font-size: 0.6rem;
+}
+.user .small_icon {
+  line-height: 0.52rem;
+  color: #fff;
+  font-size: 0.44rem;
+}
+.user .small_icon span {
+  padding-left: 0.8rem;
+  position: relative;
+}
+.user .small_icon span:nth-of-type(1)::after {
+  position: absolute;
+  content: '';
+  left: 1.74rem;
+  top: 0;
+  height: 0.52rem;
+  width: 0.04rem;
+  background: #fff;
+}
+.user .small_icon .follow {
+  background: url('../img/guanzhu.png') no-repeat;
+  background-size: 0.6rem 0.5rem;
+  margin-right: 0.5rem;
+}
+.user .small_icon .day {
+  padding-left: 1.12rem;
+  background: url('../img/book.png') no-repeat 0.4rem center;
+  background-size: 0.52rem 0.5rem;
+}
+.user .jt {
+  position: absolute;
+  right: 0.92rem;
+  top: 2.52rem;
+  color: #fff;
+  background: url('../img/more_bai.png') no-repeat;
+  background-size: 100% 100%;
+  width: 0.38rem;
+  height: 0.64rem;
+}
+.teacherList {
+  padding-bottom: 1rem;
+  background: #fff;
+}
+.teacherList ul {
+  padding-left: 1rem;
+  padding-right: 0.3rem;
+  overflow: hidden;
+  padding-bottom: 0.3rem;
+  box-shadow: 0.05rem 0.0866rem 0.5rem 0rem rgba(96, 143, 221, 0.2);
+}
+.teacherList li {
+  height: 2.84rem;
+  box-sizing: border-box;
+  width: 199.98rem;
+  border: 0.04rem solid #fbfbfb;
+  position: relative;
+}
+.teacherList .info {
+  float: left;
+  margin-right: 0.3rem;
+  margin-top: 0.4rem;
+}
+.teacherList .info .name {
+  line-height: 1.12rem;
+  color: #101010;
+  font-size: 0.64rem;
+}
+.teacherList .info p {
+  width: 11.34rem;
+  line-height: 0.66rem;
+  color: #808080;
+  font-size: 0.56rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.teacherList .button {
+  height: 2.84rem;
+  width: 2.42rem;
+  padding-top: 0.44rem;
+  background: #f69f07;
+  color: #fff;
+  text-align: center;
+  line-height: 0.9rem;
+  font-size: 0.64rem;
+  box-sizing: border-box;
+  float: left;
+}
+.teacherList .tx {
+  margin-top: 0.4rem;
+  height: 2rem;
+  width: 2rem;
+  margin-right: 0.4rem;
+  border-radius: 50%;
+  overflow: hidden;
+  float: left;
+  background: orange;
+}

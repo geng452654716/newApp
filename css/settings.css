@@ -1,0 +1,111 @@
+body {
+  background: #f4f7fd;
+}
+.clear::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+body,
+html {
+  height: 100%;
+  width: 100%;
+}
+.wrapper {
+  height: 100%;
+}
+.user {
+  height: 6.2rem;
+  padding: 2rem 0.92rem 0;
+  box-sizing: border-box;
+  background: orange;
+  position: relative;
+  background: url('../img/user_bg.png');
+  background-size: 100% 100%;
+}
+.user .tx {
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 0.06rem solid #ffffff;
+  box-sizing: border-box;
+  background: yellow;
+  margin-right: 0.6rem;
+  float: left;
+}
+.user .name {
+  line-height: 1.36rem;
+  color: #fff;
+  font-size: 0.6rem;
+}
+.user .small_icon {
+  line-height: 0.52rem;
+  color: #fff;
+  font-size: 0.44rem;
+}
+.user .small_icon span {
+  padding-left: 0.8rem;
+  position: relative;
+  line-height: 0.5rem;
+  display: inline-block;
+}
+.user .small_icon span:nth-of-type(1)::after {
+  position: absolute;
+  content: '';
+  left: 1.74rem;
+  top: 0;
+  height: 0.52rem;
+  width: 0.04rem;
+  background: #fff;
+}
+.user .small_icon .follow {
+  background: url('../img/guanzhu.png') no-repeat;
+  background-size: 0.6rem 0.5rem;
+  margin-right: 0.5rem;
+}
+.user .small_icon .day {
+  padding-left: 1.12rem;
+  background: url('../img/book.png') no-repeat 0.4rem center;
+  background-size: 0.52rem 0.5rem;
+}
+.user .jt {
+  position: absolute;
+  right: 0.92rem;
+  top: 2.66rem;
+  color: #fff;
+  background: url('../img/more_bai.png') no-repeat;
+  background-size: 100% 100%;
+  width: 0.38rem;
+  height: 0.64rem;
+}
+.list {
+  box-shadow: 0.05rem 0.0866rem 0.5rem 0rem rgba(96, 143, 221, 0.2);
+}
+.list ul {
+  padding-left: 0.5rem;
+  background: #fff;
+}
+.list li {
+  padding-left: 0.44rem;
+  border-bottom: 0.04rem solid #fbfbfb;
+  height: 2.14rem;
+  background: url(../img/more_hui.png) no-repeat right 0.92rem center;
+}
+.list li p {
+  line-height: 2.14rem;
+  font-size: 0.64rem;
+  color: #474747;
+}
+.button {
+  background: #4285f4;
+  color: #fff;
+  text-align: center;
+  width: 13.8rem;
+  height: 1.92rem;
+  font-size: 0.68rem;
+  border-radius: 0.16rem;
+  line-height: 1.92rem;
+  margin: 0 auto;
+  margin-top: 1.18rem;
+}

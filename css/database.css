@@ -1,0 +1,195 @@
+body {
+  background: #f4f7fd;
+}
+.clear::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+body,
+html {
+  height: 100%;
+  width: 100%;
+}
+.wrapper {
+  height: 100%;
+}
+.banner {
+  height: 8rem;
+  background: url();
+  background-color: yellow;
+  position: relative;
+  background: url(../img/shu_bg.jpg) no-repeat;
+  background-size: 100% 100%;
+}
+.banner .book {
+  width: 4.74rem;
+  height: 6.28rem;
+  overflow: hidden;
+  position: absolute;
+  top: 2.2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 0.24rem;
+  box-shadow: 0.05rem 0.0866rem 0.2rem 0rem rgba(89, 57, 1, 0.2);
+}
+.bookData {
+  height: 7.4rem;
+  background: #fff;
+  padding: 0.6rem;
+  box-sizing: border-box;
+}
+.bookData h3 {
+  margin-top: 0.3rem;
+  line-height: 1.24rem;
+  font-size: 0.68rem;
+  text-align: center;
+  color: #424242;
+}
+.bookData .author {
+  font-size: 0.6rem;
+  color: #777777;
+  line-height: 1.06rem;
+  text-align: center;
+}
+.bookData .info {
+  margin-top: 0.36rem;
+  line-height: 0.72rem;
+  font-size: 0.52rem;
+  color: #777777;
+  text-align: center;
+}
+.bookData .button {
+  height: 1.36rem;
+  width: 6.8rem;
+  background: #4285f4;
+  color: #fff;
+  line-height: 1.36rem;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 0.6rem;
+  margin-top: 0.44rem;
+  border-radius: 0.16rem;
+}
+.brief,
+.notice {
+  background: #fff;
+  padding: 0 0.6rem 0.6rem;
+  font-size: 0.6rem;
+  margin-top: 0.4rem;
+  box-shadow: 0rem 0.1rem 0.5rem 0rem rgba(96, 143, 221, 0.2);
+}
+.brief .title,
+.notice .title {
+  line-height: 1.78rem;
+  color: #424242;
+}
+.brief li,
+.notice li {
+  color: #808080;
+  font-size: 0.52rem;
+}
+.brief li span,
+.notice li span {
+  display: block;
+  line-height: 0.94rem;
+  float: left;
+  margin-right: 0.36rem;
+}
+.brief li p,
+.notice li p {
+  width: 11.6rem;
+  float: left;
+  line-height: 0.94rem;
+}
+.brief li:after,
+.notice li:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.brief .button,
+.notice .button {
+  margin-top: 1.62rem;
+  height: 1.6rem;
+  width: 13.8rem;
+  line-height: 1.6rem;
+  text-align: center;
+  font-size: 0.6rem;
+  color: #666;
+  border: 0.04rem solid #666666;
+  border-radius: 0.16rem;
+  margin-bottom: 1rem;
+}
+.payment {
+  width: 14rem;
+  height: 11rem;
+  padding: 0.6rem;
+  box-sizing: border-box;
+  background: #fff;
+  position: fixed;
+  bottom: -19.98rem;
+  z-index: 999;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 0.16rem;
+  transition: all .5s;
+}
+.payment .title {
+  line-height: 0.92rem;
+  color: #494949;
+  font-size: 0.6rem;
+}
+.payment .xuzhi {
+  color: #4285f4;
+}
+.payment .quan strong {
+  color: #f69f07;
+  float: right;
+  font-weight: normal;
+}
+.payment .zong strong {
+  font-weight: normal;
+  text-align: right;
+  color: #e2e3e3;
+  float: right;
+  text-decoration: line-through;
+  margin-right: 0.4rem;
+}
+.payment .zong i {
+  text-align: right;
+  color: #4285f4;
+  font-style: normal;
+  float: right;
+}
+.payment li {
+  height: 1.6rem;
+  line-height: 1.6rem;
+  box-sizing: border-box;
+  border-bottom: 0.04rem solid #fafafa;
+  font-size: 0.52rem;
+}
+.payment .button {
+  margin-top: 1.4rem;
+  height: 1.8rem;
+  width: 12.8rem;
+  line-height: 1.8rem;
+  text-align: center;
+  font-size: 0.68rem;
+  color: #fff;
+  border-radius: 0.16rem;
+  background: #00b90c url('../img/weixin.png') no-repeat left 4.28rem center;
+  background-size: 1.1rem 0.88rem;
+  padding-left: 1.1rem;
+  box-sizing: border-box;
+}
+.mask {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 99;
+  left: 0;
+  top: 0;
+  display: none;
+}

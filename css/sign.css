@@ -1,0 +1,152 @@
+*{
+     margin: 0;
+     padding: 0;
+     font-family: "微软雅黑";
+}
+ body{
+     position: relative;
+     overflow-x:hidden ;
+     background: #f4f4f4;
+}
+ a{
+     text-decoration: none;
+     cursor: pointer;
+     -webkit-tap-highlight-color:rgba(255,0,0,0) 
+}
+html,body{
+    height: 100%;
+}
+.wrapper{
+    height: 100%;
+}
+ img{
+     width: 100%;
+     height: 100%;
+}
+ div{
+     cursor: pointer;
+}
+ li{
+     list-style: none;
+     cursor: pointer;
+     cursor: pointer;
+}
+ span{
+     cursor: pointer;
+}
+ .blue{
+     border-bottom: 0.08695652173913043rem solid #4285f4;
+     color: #4285F4 !important;
+}
+ .head{
+     width: 15.217391304347826rem;
+     height: 4.239130434782608rem;
+     border-radius: 0.1956521739130435rem;
+     box-shadow: 0rem 0.043478260869565216rem 0.426666rem 0rem rgba(66, 133, 244, 0.27);
+     margin: 0.5434782608695652rem auto;
+     background: white;
+}
+ .fl{
+     border-radius: 0.1956521739130435rem;
+     margin: 0.5rem 0.4782608695652174rem 0 0.2826086956521739rem;
+     width: 4.8478260869565215rem;
+     height: 3.152173913043478rem;
+     overflow: hidden;
+     float: left;
+}
+ .rt{
+     width: 9.521739130434783rem;
+     height: 3.152173913043478rem;
+     margin-top: 0.5rem;
+     float: left;
+}
+ .rt p{
+     font-size: 0.6956521739130435rem;
+     color: #45464c;
+     width: 100%;
+     overflow: hidden;
+     text-overflow: ellipsis;
+     white-space: nowrap;
+     height: 1.173913043478261rem;
+     line-height: 1.173913043478261rem;
+}
+ .rt_con{
+     height: 1.0434782608695652rem;
+     width: 100%;
+     overflow: hidden;
+}
+ .rt_con a{
+     font-size: 0.6086956521739131rem;
+     color: #808080;
+     float: left;
+     height: 1.0434782608695652rem;
+     line-height: 1.0434782608695652rem;
+     width: 2.282608695652174rem;
+}
+ .rt_con span{
+ 	border-radius: 0.0856521739130435rem;
+    float: left;
+    width: 2.93478260869565rem;
+    height: 0.67rem;
+    border: 1px solid #4285F4;
+    text-align: center;
+    font-size: 0.384rem;
+    line-height: 0.5652173913043478rem;
+    color: #4285F4;
+    margin-top: 0.2rem;
+}
+ .rt_time{
+     font-size: 0.5217391304347826rem;
+     color: #808080;
+     width: 100%;
+     height: 0.9347826086956522rem;
+     line-height: 1.1521739130434783rem;
+}
+ .sign_cen{
+ 	margin: 0 auto;
+     width: 15.217391304347826rem;
+     height: 9rem;
+     border-radius: 0.1956521739130435rem;
+     background: white;
+     box-shadow: 0rem 0.043478260869565216rem 0.426666rem 0rem rgba(66, 133, 244, 0.27);
+     margin-bottom: 0.5434782608695652rem;
+}
+ .sign_cen p{
+     display: block;
+     width: 100%;
+     height: 2.739130434782609rem;
+     line-height: 2.739130434782609rem;
+     color: #333333;
+     font-size: 0.6521739130434783rem;
+     text-align: center;
+}
+ .sign_img{
+     width: 5.260869565217392rem;
+     height: 5.260869565217392rem;
+     margin: 0 auto;
+}
+ .sign_foot{
+ 	box-shadow: 0rem 0.043478260869565216rem 0.426666rem 0rem rgba(66, 133, 244, 0.27);
+ 	margin: 0 auto;
+     width: 15.217391304347826rem;
+     height: 8.217391304347826rem;
+     background: white;
+     border-radius: 0.1956521739130435rem;
+}
+ .sign_foot p{
+     width: 14.08695652173913rem;
+     margin: 0 auto;
+     line-height: 0.9130434782608695rem;
+     font-size: 0.5652173913043478rem;
+     color: #808080;
+}
+ .sign_foot p:first-child{
+     width: 14.08695652173913rem;
+     margin: 0 auto;
+     height: 2.6956521739130435rem;
+     line-height: 2.6956521739130435rem;
+     font-size: 0.6521739130434783rem;
+     color: #333;
+     
+}
+ 

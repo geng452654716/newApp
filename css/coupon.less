@@ -1,0 +1,79 @@
+@base:50rem;
+@blue:#4285f4;
+.clear::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+body,html{
+    height: 100%;
+    width: 100%;
+}
+.wrapper{
+    height: 100%;
+    overflow-x: hidden;
+}
+body{
+    background: #ededed;
+}
+.quan{
+    height: 310/@base;
+    width: 650/@base;
+    background: url('../img/quan_bg.png');
+    background-size: 100% 100%;
+    padding-left: 46/@base;
+    padding-right: 58/@base;
+    box-sizing: border-box;
+    margin-bottom: 30/@base;
+    .top{
+        height: 180/@base;
+        padding-top: 24/@base;
+        box-sizing: border-box;
+        .l{
+            float: left;
+            h3{
+                font-size: 40/@base;
+                color: #494949;
+                line-height: 59/@base;
+                font-weight: 900;
+            }
+            p{
+                line-height: 45/@base;
+                font-size: 26/@base;
+                color: #777777;
+            }
+        }
+        .r{
+            float: right;
+            color: @blue;
+        }
+    }
+    .bottom{
+        height: 130/@base;
+        padding-top: 13/@base;
+        box-sizing: border-box;
+        .l{
+            float: left;
+            p{
+                color: #777777;
+                line-height: 44/@base;
+                font-size: 26/@base; 
+            }
+        }
+        .r{
+            float: right;
+            font-size: 26/@base;
+            color: @blue;
+            padding-top: 28/@base;
+        }
+    }
+}
+.xuan{
+    background: url('../img/quan_bg_xuan.png');
+    background-size: 100% 100%;
+}
+.warp{
+    margin: 0 auto;
+    margin-top: 117/@base;
+    width: 650/@base;
+}

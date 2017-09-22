@@ -1,0 +1,17 @@
+$(function(){
+	$(".login").click(function(){
+		$(".msm").removeClass("blue")
+		$(this).addClass("blue")
+		$(".account").show()
+		$(".msmlogin").hide()
+	})
+	$(".msm").click(function(){
+		$(".login").removeClass("blue")
+		$(this).addClass("blue")
+		$(".account").hide()
+		$(".msmlogin").show()
+	})
+	$(".sign").click(function(){
+		window.location.href="register.html"
+	})
+})

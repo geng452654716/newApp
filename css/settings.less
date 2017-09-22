@@ -1,0 +1,115 @@
+@base:50rem;
+@blue:#4285f4;
+body{
+    background: #f4f7fd;
+}
+.clear::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+body,html{
+    height: 100%;
+    width: 100%;
+}
+.wrapper{
+    height: 100%;
+}
+
+// 用户头像
+.user{
+    height: 310/@base;
+    padding: 100/@base 46/@base 0;
+    box-sizing: border-box;
+    background: orange;
+    position: relative;
+    background: url('../img/user_bg.png');
+    background-size: 100% 100%;
+    .tx{
+        width: 130/@base;
+        height: 130/@base;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 3/@base solid #fff;
+        box-sizing: border-box;
+        background: yellow;
+        margin-right: 30/@base;
+        float: left;
+    }
+    .name{
+        line-height: 68/@base;
+        color: #fff;
+        font-size: 30/@base;
+    }
+    .small_icon{
+        line-height: 26/@base;
+        color: #fff;
+        font-size: 22/@base;
+        span{
+            padding-left: 40/@base;
+            position: relative;
+            line-height: 25/@base;
+            display: inline-block;
+        }
+        span:nth-of-type(1)::after{
+            position: absolute;
+            content: '';
+            left: 87/@base;
+            top: 0;
+            height: 26/@base;
+            width: 2/@base;
+            background: #fff;
+        }
+        .follow{
+            background: url('../img/guanzhu.png') no-repeat;
+            background-size: 30/@base 25/@base;
+            margin-right: 25/@base;
+        }
+        .day{
+            padding-left: 56/@base;
+            background: url('../img/book.png') no-repeat 20/@base center;;
+            background-size: 26/@base 25/@base;
+        }
+    }
+    .jt{
+        position: absolute;
+        right: 46/@base;
+        top: 133/@base;
+        color: #fff;
+        background: url('../img/more_bai.png') no-repeat;
+        background-size: 100% 100%;
+        width: 19/@base;
+        height: 32/@base;
+    }
+}
+.list{
+    box-shadow: 2.5/@base 4.33/@base 25/@base 0/@base rgba(96, 143, 221, 0.2);
+    ul{
+        padding-left: 25/@base;
+        background: #fff;
+    }
+    li{
+        padding-left: 22/@base;
+        border-bottom: 2/@base solid #fbfbfb; 
+        height: 107/@base;
+        background: url(../img/more_hui.png) no-repeat right 46/@base center;
+        p{
+            line-height: 107/@base;
+            font-size: 32/@base;
+            color: #474747;
+        }
+    }
+}
+.button{
+    background: @blue;
+    color: #fff;
+    text-align: center;
+    width: 690/@base;
+    height: 96/@base;
+    font-size: 34/@base;
+    border-radius: 8/@base;
+    line-height: 96/@base;
+    margin: 0 auto;
+    margin-top: 59/@base;
+}
+  

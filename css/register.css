@@ -1,0 +1,214 @@
+*{
+     margin: 0;
+     padding: 0;
+     font-family: "微软雅黑";
+     -webkit-tap-highlight-color: transparent;
+     -webkit-tap-highlight-color:rgba(255,0,0,0) 
+}
+ body{
+     position: relative;
+     overflow-x:hidden ;
+}
+ a{
+     text-decoration: none;
+     cursor: pointer;
+     -webkit-tap-highlight-color:rgba(255,0,0,0) 
+}
+ img{
+     width: 100%;
+     height: 100%;
+}
+html,body{
+    height: 100%;
+}
+.wrapper{
+    height: 100%;
+}
+ div{
+     cursor: pointer;
+}
+ ::-webkit-input-placeholder {
+    /* WebKit browsers */
+     color: #ccc;
+}
+ :-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+     color: #ccc;
+}
+ ::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+     color: #ccc;
+}
+ :-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+     color: #ccc;
+}
+ input[type=submit],input[type=reset],input[type=button],input[type=text]{
+     -webkit-appearance:none;
+     outline: none;
+}
+ li{
+     list-style: none;
+     cursor: pointer;
+     cursor: pointer;
+}
+ span{
+     cursor: pointer;
+}
+ .blue{
+     border-bottom: 0.08695652173913043rem solid #4285f4;
+     color: #4285F4 !important;
+}
+.blue_bg{ background: #4285F4;}
+ .head{
+     width: 3.6739130434782608rem;
+     /*height: 0.782608695652174rem;*/
+     margin: 1.30434782608696rem auto 1.3695652173913044rem auto;
+}
+ .nav{
+     height: 1.9782608695652173rem;
+     width: 16.304347826086957rem;
+     overflow: hidden;
+     border-bottom: 0.021739130434782608rem solid #d3d4d3;
+}
+ .nav div{
+     height: 1.9130434782608696rem;
+     line-height: 1.9130434782608696rem;
+     font-size: 0.7608695652173914rem;
+     color: #101010;
+}
+ .login{
+     margin: 0 2.1739130434782608rem;
+     text-align: center;
+     float: left;
+}
+ .msm{
+     margin-left: 1.9130434782608696rem;
+     text-align: center;
+     float: left;
+}
+.msmlogin li{
+     width: 14.565217391304348rem;
+     height: 2.391304347826087rem;
+     margin: 0 auto;
+     border-bottom: 1px solid #d3d4d3;
+     overflow: hidden;
+}
+.msmlogin li span{
+     width: 1.9565217391304348rem;
+     height: 2.391304347826087rem;
+     line-height: 2.391304347826087rem;
+     font-size: 0.6956521739130435rem;
+     color:#101010;
+     float: left;
+}
+.ms_first input{
+     width: 12.608695652173912rem;
+     height:2.346666666666667rem;
+     line-height: 2.346666666666667rem;
+     border: 0;
+     float: left;
+     text-indent: 0.17391304347826086rem;
+     font-size: 0.6956521739130435rem;
+}
+.ms_last span{ width:  3.956522rem !important;}
+#code{
+	float: left;
+	width: 4.48rem;
+     height:2.346666666666667rem;
+     line-height: 2.346666666666667rem;
+     border: 0;
+     float: left;
+     text-indent: 0.17391304347826086rem;
+     font-size: 0.6956521739130435rem;
+}
+ .inpbtn input{
+     width: 14.565217391304348rem;
+     height: 2.1739130434782608rem;
+     display: block;
+     border: 0;
+     margin: 1.5rem auto 0.782608695652174rem auto;
+     font-size: 0.7391304347826086rem;
+     color: white;
+     background: #d8d8d8;
+     border-radius: 0.1706666666666667rem;
+}
+ .foot{
+     width: 14.565217391304348rem;
+     height: 6.086956521739131rem;
+     margin: 0 auto;
+     margin-top: 2.5652173913043477rem;
+}
+ .sign{
+     width: 14.565217391304348rem;
+     margin: 0 auto;
+     overflow: hidden;
+}
+ .sign a{
+     float: right;
+     font-size: 0.5217391304347826rem;
+     color: #4285F4;
+}
+ .foot_head{
+     width: 14.565217391304348rem;
+     height: 1.2608695652173914rem;
+     position: relative;
+}
+ .line{
+     position: absolute;
+     height: 0.043478260869565216rem;
+     background: #eaeaea;
+     width: 14.565217391304348rem;
+     top: 50%;
+     margin-top: -0.021739130434782608rem;
+}
+ .cen{
+     width: 4.913043478260869rem;
+     height: 1.2608695652173914rem;
+     font-size:0.5973333333333333rem ;
+     text-align: center;
+     line-height: 1.2608695652173914rem;
+     color: #808080;
+     background: white;
+     z-index: 2;
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     margin-left: -2.4565217391304346rem;
+     margin-top: -0.6304347826086957rem;
+}
+ .wx{
+     width: 2.608695652173913rem;
+     height: 2.608695652173913rem;
+     overflow: hidden;
+     border-radius: 50%;
+     margin: 0.6086956521739131rem auto;
+}
+ #btn{
+ 	width: 5.12rem;
+ 	height: 1.429333333333333rem;
+ 	float: left;
+ 	background: #4285F4;
+ 	border: 0;
+ 	font-size: 0.64rem; 
+ 	color: white;
+ 	border-radius: 4px;
+ 	margin-left: 1.01rem;
+ 	margin-top: 0.4rem;
+ }
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

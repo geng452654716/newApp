@@ -1,0 +1,13 @@
+body,
+html {
+  height: 100%;
+}
+.wrapper {
+  height: 100%;
+}
+.img {
+  height: 8.44rem;
+  width: 8.26rem;
+  margin: 0 auto;
+  padding-top: 5.34rem;
+}

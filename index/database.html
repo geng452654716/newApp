@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="screen-orientation" content="portrait" />
+    <meta name="full-screen" content="yes">
+    <meta name="format-detection" content="telephone=no,email=no">
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/database.css">
+    <title>Softlink</title>
+    <script>
+        (function (deviceWidth, fontSize) {
+            deviceWidth = deviceWidth || 640;
+            fontSize = fontSize || 100;
+            var metas = document.querySelectorAll('meta');
+            var viewPort = [].slice.call(metas).filter((item) => {
+                return item.name === 'viewport';
+            })[0];
+            if (!viewPort) {
+                var meta = document.createElement('meta');
+                meta.name = 'viewport';
+                viewPort = document.head.insertBefore(meta, metas[metas.length - 1].nextElementSibling);
+            }
+            var scale = 1 / window.devicePixelRatio;
+            viewPort.content = `width=device-width, initial-scale=${scale}, maximum-scale=${scale}, minimum-scale=${scale}, user-scalable=no`;
+            var html = document.documentElement;
+            var fn = function () {
+                html.style.fontSize = (html.clientWidth / deviceWidth) * fontSize + 'px';
+            };
+            fn();
+            window.addEventListener('resize', fn);
+        })(750, 50);
+    </script>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://unpkg.com/better-scroll@1.0.1/dist/bscroll.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/public.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/database.js" type="text/javascript" charset="utf-8"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="content">
+            <!-- 书 | banner-->
+            <div class="banner">
+                <div class="book">
+                    <img src="../img/shu.png" alt="">
+                </div>
+            </div>
+            <!-- 书资料 -->
+            <div class="bookData">
+                <h3>书名书名书名书名</h3>
+                <div class="author">Monica</div>
+                <div class="info">资料简介资料简介资料简介资料简介资料简介资料简介资料简介资料简介资料简介资料简介</div>
+                <div class="button">¥19.90</div>
+            </div>
+            <!-- 简介 -->
+            <div class="brief">
+                <div class="title">简介</div>
+                <ul>
+                    <li><span>1、</span>
+                        <p>在GPA有劣势的情况下，提升背景的方式有哪些？</p>
+                    </li>
+                    <li><span>2、</span>
+                        <p>实习与科研，孰轻孰重，是否存在完美的结合点？</p>
+                    </li>
+                    <li><span>3、</span>
+                        <p>在转专业申请上，理工科背景同学都有哪些选择？</p>
+                    </li>
+                    <li><span>4、</span>
+                        <p>如何针对自己的情况和目标学校专业进行有效的时间规划？</p>
+                    </li>
+                    <li><span>5、</span>
+                        <p>美国管理科学与工程的全方位申请解析？</p>
+                    </li>
+                </ul>
+            </div>
+            <!-- 公告 -->
+            <div class="notice">
+                <div class="title">公告</div>
+                <ul>
+                    <li><span>1、</span>
+                        <p>在GPA有劣势的情况下，提升背景的方式有哪些？</p>
+                    </li>
+                    <li><span>2、</span>
+                        <p>实习与科研，孰轻孰重，是否存在完美的结合点？</p>
+                    </li>
+                    <li><span>3、</span>
+                        <p>在转专业申请上，理工科背景同学都有哪些选择？</p>
+                    </li>
+                    <li><span>4、</span>
+                        <p>如何针对自己的情况和目标学校专业进行有效的时间规划？</p>
+                    </li>
+                    <li><span>5、</span>
+                        <p>美国管理科学与工程的全方位申请解析？</p>
+                    </li>
+                </ul>
+                <div class="button">关注我们</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 支付 -->
+    <div class="mask"></div>
+    <div class="payment">
+        <div class="title">GRE填空精选500题</div>
+        <ul>
+            <li class='xuzhi'>
+                <span>购买须知</span>
+            </li>
+            <li class='quan'>
+                <span>选择礼券</span>
+                <strong>资料库5折礼券</strong>
+            </li>
+            <li class='zong'>
+                <span>支付总额</span>
+                <i>¥9.60</i>
+                <strong>¥19.00</strong>
+            </li>
+        </ul>
+        <div class="button">微信支付</div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+$(function(){
+	$(".order").click(function(){
+		window.location.href="dindan.html"
+	})
+	$(".coup").click(function(){
+		window.location.href="coupon.html"
+	})
+	$(".code").click(function(){
+		window.location.href="code.html"
+	})
+	$(".follow").click(function(){
+		window.location.href="userfollow.html"
+	})
+	$(".setup").click(function(){
+		window.location.href="settings.html"
+	})
+	$(".head").click(function(){
+		window.location.href="signin.html"
+	})
+})

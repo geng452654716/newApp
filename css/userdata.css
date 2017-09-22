@@ -1,0 +1,65 @@
+.clear::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+body,
+html {
+  height: 100%;
+  width: 100%;
+}
+.wrapper {
+  height: 100%;
+  overflow-x: hidden;
+}
+li::after {
+  content: '';
+  clear: both;
+}
+ul {
+  padding-left: 0.6rem;
+}
+li {
+  padding-right: 2rem;
+  border-bottom: 0.04rem solid #f3f3f3;
+  height: 2.04rem;
+  box-sizing: border-box;
+  line-height: 2.04rem;
+  background: url(../img/more_hui.png) no-repeat right 0.84rem center;
+  background-size: 0.38rem 0.64rem;
+}
+li .name {
+  float: left;
+  font-size: 0.64rem;
+  color: #101010;
+}
+li .cont {
+  float: right;
+  font-size: 0.6rem;
+  color: #8c8c8c;
+}
+.tx {
+  height: 3.86rem;
+  line-height: 3.86rem;
+}
+.tx .cont {
+  width: 2.2rem;
+  height: 2.2rem;
+  border: 0.04rem solid #d4d4d8;
+  background: orange;
+  border-radius: 50%;
+  margin-top: 0.8rem;
+  overflow: hidden;
+}
+.button {
+  height: 1.92rem;
+  width: 13.8rem;
+  line-height: 1.92rem;
+  text-align: center;
+  margin: 0 auto;
+  color: #fff;
+  background: #4285f4;
+  margin-top: 2.4rem;
+  font-size: 0.68rem;
+  border-radius: 0.1rem;
+}

@@ -1,0 +1,201 @@
+@base:50rem;
+@blue:#4285f4;
+body{
+    background: #f4f7fd;
+}
+.clear::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+body,html{
+    height: 100%;
+    width: 100%;
+}
+.wrapper{
+    height: 100%;
+}
+
+// banner
+.banner{
+    height: 400/@base;
+    background: url();
+    background-color: yellow;
+    position: relative;
+    background: url(../img/shu_bg.jpg) no-repeat;
+    background-size: 100% 100%;
+    .book{
+        width: 237/@base;
+        height: 314/@base;
+        overflow: hidden;
+        position: absolute;
+        top: 110/@base;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 12/@base;
+        box-shadow: 2.5/@base 4.33/@base 10/@base 0/@base rgba(89, 57, 1, 0.2);
+    }
+}
+
+//书信息
+.bookData{
+    height: 370/@base;
+    background: #fff;
+    padding: 30/@base;
+    box-sizing: border-box;
+    h3{
+        margin-top: 15/@base;
+        line-height: 62/@base;
+        font-size: 34/@base;
+        text-align: center;  
+        color: #424242;
+    }
+    .author{
+        font-size: 30/@base;
+        color: #777777;
+        line-height: 53/@base;
+        text-align: center;
+    }
+    .info{
+        margin-top: 18/@base;
+        line-height: 36/@base;
+        font-size: 26/@base;
+        color: #777777;
+        text-align: center;
+    }
+    .button{
+        height: 68/@base;
+        width: 340/@base;
+        background: @blue;
+        color: #fff;
+        line-height: 68/@base;
+        text-align: center;
+        margin: 0 auto;
+        font-size: 30/@base;
+        margin-top: 22/@base;
+        border-radius: 8/@base;
+    }
+}
+  
+//简介 brief  公告 notice
+.brief,.notice{
+    background: #fff;
+    padding: 0 30/@base 30/@base;
+    font-size: 30/@base;
+    margin-top: 20/@base;
+    box-shadow: 0/@base 5/@base 25/@base 0/@base rgba(96, 143, 221, 0.2);
+    .title{
+        line-height: 89/@base;
+        color: #424242;
+    }
+    li{
+        color: #808080;
+        font-size: 26/@base;
+        span{
+            display: block;
+            line-height: 47/@base;
+            float: left;
+            margin-right: 18/@base;
+        }
+        p{
+            width: 580/@base;
+            float:left;
+            line-height: 47/@base;
+        }
+    }
+    li:after{
+        content: '';
+        display: block;
+        clear: both;
+    }
+    .button{
+        margin-top: 81/@base;
+        height: 80/@base;
+        width: 690/@base;
+        line-height: 80/@base;
+        text-align: center;
+        font-size: 30/@base;
+        color: #666;
+        border: 2/@base solid #666;
+        border-radius: 8/@base;
+        margin-bottom: 50/@base;
+    }
+}
+//支付
+.payment{
+    width: 700/@base;
+    height: 550/@base;
+    padding: 30/@base;
+    box-sizing: border-box;
+    background: #fff;
+    position: fixed;
+    bottom: -999/@base;
+    z-index: 999;
+    left: 50%;
+    transform: translateX(-50%);
+    // display: none;
+    border-radius: 8/@base;
+    transition: all .5s;
+    .title{
+        line-height: 46/@base;
+        color: #494949;
+        font-size: 30/@base;
+    }
+    .xuzhi{
+        color:@blue;
+    }
+    .quan{
+        strong{
+            color: #f69f07;
+            float: right;
+            font-weight: normal;
+        }
+    }
+    .zong{
+        strong{
+            font-weight: normal;
+            text-align: right;
+            color: #e2e3e3;
+            float: right;
+            text-decoration: line-through;
+            margin-right: 20/@base;
+        }
+        i{
+            text-align: right;
+            color: @blue;
+            font-style: normal;
+            float: right;
+        }
+    }
+    li{
+        height: 80/@base;
+        line-height: 80/@base;
+        box-sizing: border-box;
+        border-bottom: 2/@base solid #fafafa;
+        font-size: 26/@base;
+    }
+    .button{
+        margin-top: 70/@base;
+        height: 90/@base;
+        width: 640/@base;
+        line-height: 90/@base;
+        text-align: center;
+        font-size: 34/@base;
+        color: #fff;
+        border-radius: 8/@base;
+        background: #00b90c url('../img/weixin.png') no-repeat left 214/@base center;
+        background-size: 55/@base 44/@base;
+        padding-left: 55/@base;
+        box-sizing: border-box;
+    }
+}
+.mask{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .4);
+    z-index: 99;
+    left: 0;
+    top: 0;
+    display: none;
+}
