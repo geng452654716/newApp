@@ -1,79 +1,81 @@
-body,html{
-    height: 100%;
+body,
+html {
+  height: 100%;
 }
-.wrapper{
-    height: 100%;
+.wrapper {
+  height: 100%;
 }
-.xianshi{   
-	font-size: 0.64rem;
-    color: #4C4C4C;
-    text-indent: 0.8533333333333333rem;
-    background: url(../img/currency.png) no-repeat -0.1rem -8.2rem;
-    background-size: 1rem;
-    margin-top: 2.0217391304347827rem;
-    height: 1.5rem;
-    line-height: 2.5rem;
-    margin-left: 0.6rem;
+.xianshi {
+  font-size: 0.6rem;
+  color: #4C4C4C;
+  text-indent: 0.8rem;
+  background: url(../img/currency.png) no-repeat -0.1rem -8.2rem;
+  background-size: 1rem;
+  margin-top: 1.88rem;
+  height: 1.4rem;
+  line-height: 2.34rem;
+  margin-left: 0.56rem;
 }
-.recon{
-    padding-bottom: 2.133333333333333rem;
+.recon {
+  padding-bottom: 4.8rem;
 }
-.recon_box{
-     width: 14.673913043478262rem;
-     height: 3.260869565217391rem;
-     padding: 0.7391304347826086rem 0.3695652173913043rem;
-     border-bottom: 0.043478260869565216rem solid #f5f5f5;
-     margin: 0 auto;
+.recon_box {
+  width: 13.74rem;
+  height: 3.04rem;
+  padding: 0.68rem 0.34rem;
+  border-bottom: 0.04rem solid #f5f5f5;
+  margin: 0 auto;
 }
- .box_fl{
-     width: 4.8478260869565215rem;
-     height: 3.260869565217391rem;
-     overflow: hidden;
-     margin-right: 0.6086956521739131rem;
-     float: left;
-     border-radius: 0.1956521739130435rem;
+.box_fl {
+  width: 4.54rem;
+  height: 3.04rem;
+  overflow: hidden;
+  margin-right: 0.56rem;
+  float: left;
+  border-radius: 0.18rem;
 }
- .box_fl img{
-     width: 100%;
-     height: 100%;
+.box_fl img {
+  width: 100%;
+  height: 100%;
 }
- .box_rt{
-     width: 9.217391304347826rem;
-     height: 3.260869565217391rem;
-     float: left;
+.box_rt {
+  width: 8.64rem;
+  height: 3.04rem;
+  float: left;
 }
- .box_rt p{
-     width: 100%;
-     height: 1.108695652173913rem;
-     line-height: 1.108695652173913rem;
-     text-overflow: ellipsis;
-     overflow: hidden;
-     white-space: nowrap;
-     font-size: 0.7391304347826086rem;
-     color: #333;
+.box_rt p {
+  width: 100%;
+  height: 1.02rem;
+  line-height: 1.02rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 0.68rem;
+  color: #333;
 }
- .box_rt span{
-     display: block;
-     font-size: 0.6521739130434783rem;
-     color: #4c4c4c;
-     height: 1rem;
-     line-height: 1rem;
+.box_rt span {
+  display: block;
+  font-size: 0.6rem;
+  color: #4c4c4c;
+  height: 1rem;
+  line-height: 1rem;
 }
- .box_fot{
-     width: 100%;
-     height: 1.1521739130434783rem;
+.box_fot {
+  width: 100%;
+  height: 1.08rem;
 }
- .box_fot dd{
-     font-size: 0.8695652173913043rem;
-     color: #ffa100;
-     float: left;
-     height: 1.49rem;
+.box_fot dd {
+  font-size: 0.8rem;
+  color: #ffa100;
+  float: left;
+  height: 1.38rem;
+  line-height: 1.22rem;
 }
- .box_fot dt{
-     float: left;
-     margin-left: 0.43478260869565216rem;
-     font-size: 0.43478260869565216rem;
-     color: #808080;
-    height: 1.49rem;
-    line-height: 1.49rem;
+.box_fot dt {
+  float: left;
+  margin-left: 0.4rem;
+  font-size: 0.48rem;
+  color: #808080;
+  height: 1.38rem;
+  line-height: 1.38rem;
 }

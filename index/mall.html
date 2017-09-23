@@ -10,10 +10,27 @@
 	<link rel="stylesheet" type="text/css" href="../css/mall.css" />
 	<link rel="stylesheet" type="text/css" href="../css/public.css" />
 	<script type="text/javascript">
-		document.documentElement.style.fontSize = document.documentElement.clientWidth / 320 * 20 + 'px';
-		onresize = function () {
-			document.documentElement.style.fontSize = document.documentElement.clientWidth / 320 * 20 + 'px';
-		};
+		(function (deviceWidth, fontSize) {
+			deviceWidth = deviceWidth || 640;
+			fontSize = fontSize || 100;
+			var metas = document.querySelectorAll('meta');
+			var viewPort = [].slice.call(metas).filter((item) => {
+				return item.name === 'viewport';
+			})[0];
+			if (!viewPort) {
+				var meta = document.createElement('meta');
+				meta.name = 'viewport';
+				viewPort = document.head.insertBefore(meta, metas[metas.length - 1].nextElementSibling);
+			}
+			var scale = 1 / window.devicePixelRatio;
+			viewPort.content = `width=device-width, initial-scale=${scale}, maximum-scale=${scale}, minimum-scale=${scale}, user-scalable=no`;
+			var html = document.documentElement;
+			var fn = function () {
+				html.style.fontSize = (html.clientWidth / deviceWidth) * fontSize + 'px';
+			};
+			fn();
+			window.addEventListener('resize', fn);
+		})(750, 50);
 	</script>
 	<script src="../js/mall.js" type="text/javascript" charset="utf-8"></script>
 	<!-- <script src="../js/public.js"></script> -->
@@ -48,22 +65,34 @@
 					<div class="pre_con">
 						<div class="pre_igm"><img src="../img/tu.jpg"></div>
 						<p>GRE满分女神答题策略</p>
-						<span><a class="small">¥</a>6</span>
+						<div>
+							<strong>讲师名</strong>
+							<span><a class="small">¥</a>6</span>
+						</div>
 					</div>
 					<div class="pre_con">
 						<div class="pre_igm"><img src="../img/tu.jpg"></div>
 						<p>GRE满分女神答题策略</p>
-						<span><a class="small">¥</a>6</span>
+						<div>
+							<strong>讲师名</strong>
+							<span><a class="small">¥</a>6</span>
+						</div>
 					</div>
 					<div class="pre_con">
 						<div class="pre_igm"><img src="../img/tu.jpg"></div>
 						<p>GRE满分女神答题策略</p>
-						<span><a class="small">¥</a>6</span>
+						<div>
+							<strong>讲师名</strong>
+							<span><a class="small">¥</a>6</span>
+						</div>
 					</div>
 					<div class="pre_con">
 						<div class="pre_igm"><img src="../img/tu.jpg"></div>
 						<p>GRE满分女神答题策略</p>
-						<span><a class="small">¥</a>6</span>
+						<div>
+							<strong>讲师名</strong>
+							<span><a class="small">¥</a>6</span>
+						</div>
 					</div>
 				</div>
 				<div class="look">
@@ -76,17 +105,17 @@
 					<div class="jihe_con">
 						<div class="jc_img"><img src="../img/tu.jpg"></div>
 						<p>GRE数学170难题</p>
-						<div class="ji_pr">¥18.00</div>
+						<div class="ji_pr"><span class="small">¥</span>18.00</div>
 					</div>
 					<div class="jihe_con">
 						<div class="jc_img"><img src="../img/tu.jpg"></div>
 						<p>GRE数学170难题</p>
-						<div class="ji_pr">¥18.00</div>
+						<div class="ji_pr"><span class="small">¥</span>18.00</div>
 					</div>
 					<div class="jihe_con">
 						<div class="jc_img"><img src="../img/tu.jpg"></div>
 						<p>GRE数学170难题</p>
-						<div class="ji_pr">¥18.00</div>
+						<div class="ji_pr"><span class="small">¥</span>18.00</div>
 					</div>
 				</div>
 				<div class="look">
@@ -113,6 +142,7 @@
 					查看更多<img src="../img/duo.png" />
 				</div>
 			</div>
+			<div class="zhan"></div>
 		</div>
 
 		<footer>

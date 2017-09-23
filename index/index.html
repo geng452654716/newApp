@@ -2,40 +2,40 @@
 <html lang="en">
 
 <head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta http-equiv="X-UA-Compatible" content="ie=edge">
-		<meta name="x5-orientation" content="portrait">
-		<meta name="x5-fullscreen" content="true">
-		<meta name="screen-orientation" content="portrait" />
-		<meta name="full-screen" content="yes">
-		<meta name="format-detection" content="telephone=no,email=no">
-		<link rel="stylesheet" type="text/css" href="../css/public.css" />
-		<link rel="stylesheet" type="text/css" href="../css/zhibo.css" />
-		<title>Softlink</title>
-		<script>
-			(function (deviceWidth, fontSize) {
-				deviceWidth = deviceWidth || 640;
-				fontSize = fontSize || 100;
-				var metas = document.querySelectorAll('meta');
-				var viewPort = [].slice.call(metas).filter((item) => {
-					return item.name === 'viewport';
-				})[0];
-				if (!viewPort) {
-					var meta = document.createElement('meta');
-					meta.name = 'viewport';
-					viewPort = document.head.insertBefore(meta, metas[metas.length - 1].nextElementSibling);
-				}
-				var scale = 1 / window.devicePixelRatio;
-				viewPort.content = `width=device-width, initial-scale=${scale}, maximum-scale=${scale}, minimum-scale=${scale}, user-scalable=no`;
-				var html = document.documentElement;
-				var fn = function () {
-					html.style.fontSize = (html.clientWidth / deviceWidth) * fontSize + 'px';
-				};
-				fn();
-				window.addEventListener('resize', fn);
-			})(750, 50);
-		</script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="x5-orientation" content="portrait">
+	<meta name="x5-fullscreen" content="true">
+	<meta name="screen-orientation" content="portrait" />
+	<meta name="full-screen" content="yes">
+	<meta name="format-detection" content="telephone=no,email=no">
+	<title>Softlink</title>
+	<script>
+		(function (deviceWidth, fontSize) {
+			deviceWidth = deviceWidth || 640;
+			fontSize = fontSize || 100;
+			var metas = document.getElementsByTagName('meta');
+			var viewPort = [].slice.call(metas).filter((item) => {
+				return item.name === 'viewport';
+			})[0];
+			if (!viewPort) {
+				var meta = document.createElement('meta');
+				meta.name = 'viewport';
+				viewPort = document.head.insertBefore(meta, metas[metas.length - 1].nextElementSibling);
+			}
+			var scale = 1 / window.devicePixelRatio;
+			viewPort.content = `width=device-width, initial-scale=${scale}, maximum-scale=${scale}, minimum-scale=${scale}, user-scalable=no`;
+			var html = document.documentElement;
+			var fn = function () {
+				html.style.fontSize = (html.clientWidth / deviceWidth) * fontSize + 'px';
+			};
+			fn();
+			window.addEventListener('resize', fn);
+		})(750, 50);
+	</script>
+	<link rel="stylesheet" type="text/css" href="../css/public.css" />
+	<link rel="stylesheet" type="text/css" href="../css/zhibo.css" />
 	<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
 	<script src="../js/bscroll.min.js"></script>
 	<script src="../js/public.js"></script>

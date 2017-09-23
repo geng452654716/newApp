@@ -1,0 +1,115 @@
+@base:50rem;
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "微软雅黑";
+}
+body{
+    position: relative;
+    overflow-x:hidden ;
+}
+html,body{
+   height: 100%;
+}
+.wrapper{
+   height: 100%;
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+    -webkit-tap-highlight-color:rgba(255,0,0,0) 
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+div{ cursor: pointer;}
+li{list-style: none; cursor: pointer; cursor: pointer;}
+span{ cursor: pointer;}
+input[type=submit],input[type=reset],input[type=button],input[type=text]{-webkit-appearance:none; outline: none;}
+.blue{
+    color: #4285f4 !important;
+}
+.blue_four{
+   border: 4px solid #4285f4;
+}
+.small{
+    font-size: 24/@base;
+}
+.head{
+    width: 100%;
+    height: 94/@base;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: white;
+    z-index: 2;
+    box-shadow: 0px 2px 19/@base 0px rgba(66, 133, 244, 0.2);
+}
+.head_sou{
+    width: 682/@base;
+    height: 61/@base;
+    text-indent: 68/@base;
+    border-radius: 28/@base;
+    position: absolute;
+    background:#f0f0f0 url(../img/currency.png) no-repeat 23/@base  -217/@base;
+    background-size: 40/@base;
+    top: 50%;
+    left: 50%;
+    overflow: hidden;
+    margin-left:  -341/@base;
+    margin-top:  -30/@base;
+    color: #999;
+    font-size: 30/@base;
+    line-height: 61/@base;
+}
+
+footer{
+    width: 100%;
+    height: 101/@base;
+    position: fixed;
+    bottom: 0;
+    background: white;
+    z-index: 2;
+    box-shadow: 0px 2px 19/@base 0px rgba(66, 133, 244, 0.2);
+}
+footer dl{
+    width: 25%;
+    height: 100%;
+    text-align: center;
+    float: left;
+}
+footer dl dt{
+    width: 100%;
+    height: 34/@base;
+    margin-top: 19/@base;
+    overflow: hidden;
+}
+footer dl img{
+    display: block;
+    margin:0 auto ;
+}
+footer dl dd{
+    line-height: 40/@base;
+    height: 40/@base;
+    width: 100%;
+    text-align: center;
+    color: #999999;
+    font-size: 22/@base;
+}
+footer dl:first-child img{
+   width: 1rem;
+   height: 40/@base;
+}
+footer dl:nth-child(2) img{
+    width: 36/@base;
+    height: 33/@base;
+}
+footer dl:nth-child(3) img{
+   width: 40/@base;
+   height: 39/@base;
+}
+footer dl:last-child img{
+   width: 40/@base;
+   height: 44/@base;
+}

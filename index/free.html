@@ -8,10 +8,27 @@
 	<link rel="stylesheet" type="text/css" href="../css/public.css" />
 	<link rel="stylesheet" type="text/css" href="../css/free.css" />
 	<script type="text/javascript">
-		document.documentElement.style.fontSize = document.documentElement.clientWidth / 320 * 20 + 'px';
-		onresize = function () {
-			document.documentElement.style.fontSize = document.documentElement.clientWidth / 320 * 20 + 'px';
-		};
+		(function (deviceWidth, fontSize) {
+            deviceWidth = deviceWidth || 640;
+            fontSize = fontSize || 100;
+            var metas = document.querySelectorAll('meta');
+            var viewPort = [].slice.call(metas).filter((item) => {
+                return item.name === 'viewport';
+            })[0];
+            if (!viewPort) {
+                var meta = document.createElement('meta');
+                meta.name = 'viewport';
+                viewPort = document.head.insertBefore(meta, metas[metas.length - 1].nextElementSibling);
+            }
+            var scale = 1 / window.devicePixelRatio;
+            viewPort.content = `width=device-width, initial-scale=${scale}, maximum-scale=${scale}, minimum-scale=${scale}, user-scalable=no`;
+            var html = document.documentElement;
+            var fn = function () {
+                html.style.fontSize = (html.clientWidth / deviceWidth) * fontSize + 'px';
+            };
+            fn();
+            window.addEventListener('resize', fn);
+        })(750, 50);
 	</script>
 	<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
 	<script src="https://unpkg.com/better-scroll@1.0.1/dist/bscroll.min.js"></script>
@@ -44,7 +61,7 @@
 						<div class="box_fot">
 							<dd>
 								<a class="small">¥</a>6</dd>
-							<dt>1000人浏览</dt>
+							<dt>1000人报名</dt>
 						</div>
 					</div>
 				</div>
@@ -58,7 +75,7 @@
 						<div class="box_fot">
 							<dd>
 								<a class="small">¥</a>6</dd>
-							<dt>1000人浏览</dt>
+							<dt>1000人报名</dt>
 						</div>
 					</div>
 				</div>
@@ -72,7 +89,7 @@
 						<div class="box_fot">
 							<dd>
 								<a class="small">¥</a>6</dd>
-							<dt>1000人浏览</dt>
+							<dt>1000人报名</dt>
 						</div>
 					</div>
 				</div>
@@ -86,7 +103,7 @@
 						<div class="box_fot">
 							<dd>
 								<a class="small">¥</a>6</dd>
-							<dt>1000人浏览</dt>
+							<dt>1000人报名</dt>
 						</div>
 					</div>
 				</div>
@@ -100,7 +117,7 @@
 						<div class="box_fot">
 							<dd>
 								<a class="small">¥</a>6</dd>
-							<dt>1000人浏览</dt>
+							<dt>1000人报名</dt>
 						</div>
 					</div>
 				</div>
@@ -114,7 +131,7 @@
 						<div class="box_fot">
 							<dd>
 								<a class="small">¥</a>6</dd>
-							<dt>1000人浏览</dt>
+							<dt>1000人报名</dt>
 						</div>
 					</div>
 				</div>
@@ -128,7 +145,7 @@
 						<div class="box_fot">
 							<dd>
 								<a class="small">¥</a>6</dd>
-							<dt>1000人浏览</dt>
+							<dt>1000人报名</dt>
 						</div>
 					</div>
 				</div>
@@ -142,7 +159,7 @@
 						<div class="box_fot">
 							<dd>
 								<a class="small">¥</a>6</dd>
-							<dt>1000人浏览</dt>
+							<dt>1000人报名</dt>
 						</div>
 					</div>
 				</div>

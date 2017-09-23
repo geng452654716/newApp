@@ -1,152 +1,150 @@
-*{
-     margin: 0;
-     padding: 0;
-     font-family: "微软雅黑";
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "微软雅黑";
 }
- body{
-     position: relative;
-     overflow-x:hidden ;
-     background: #f4f4f4;
+body {
+  position: relative;
+  overflow-x: hidden ;
+  background: #f4f4f4;
 }
- a{
-     text-decoration: none;
-     cursor: pointer;
-     -webkit-tap-highlight-color:rgba(255,0,0,0) 
+a {
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(255, 0, 0, 0);
 }
-html,body{
-    height: 100%;
+html,
+body {
+  height: 100%;
 }
-.wrapper{
-    height: 100%;
+.wrapper {
+  height: 100%;
 }
- img{
-     width: 100%;
-     height: 100%;
+img {
+  width: 100%;
+  height: 100%;
 }
- div{
-     cursor: pointer;
+div {
+  cursor: pointer;
 }
- li{
-     list-style: none;
-     cursor: pointer;
-     cursor: pointer;
+li {
+  list-style: none;
+  cursor: pointer;
 }
- span{
-     cursor: pointer;
+span {
+  cursor: pointer;
 }
- .blue{
-     border-bottom: 0.08695652173913043rem solid #4285f4;
-     color: #4285F4 !important;
+.blue {
+  border-bottom: 0.08rem solid #4285f4;
+  color: #4285F4 !important;
 }
- .head{
-     width: 15.217391304347826rem;
-     height: 4.239130434782608rem;
-     border-radius: 0.1956521739130435rem;
-     box-shadow: 0rem 0.043478260869565216rem 0.426666rem 0rem rgba(66, 133, 244, 0.27);
-     margin: 0.5434782608695652rem auto;
-     background: white;
+.head {
+  width: 14.26rem;
+  height: 3.96rem;
+  border-radius: 0.18rem;
+  box-shadow: 0rem 0.04rem 0.38rem 0rem rgba(66, 133, 244, 0.27);
+  margin: 0.5rem auto;
+  background: white;
 }
- .fl{
-     border-radius: 0.1956521739130435rem;
-     margin: 0.5rem 0.4782608695652174rem 0 0.2826086956521739rem;
-     width: 4.8478260869565215rem;
-     height: 3.152173913043478rem;
-     overflow: hidden;
-     float: left;
+.fl {
+  border-radius: 0.18rem;
+  margin: 0.46rem 0.44rem 0 0.26rem;
+  width: 4.54rem;
+  height: 2.94rem;
+  overflow: hidden;
+  float: left;
 }
- .rt{
-     width: 9.521739130434783rem;
-     height: 3.152173913043478rem;
-     margin-top: 0.5rem;
-     float: left;
+.rt {
+  width: 8.92rem;
+  height: 2.94rem;
+  margin-top: 0.46rem;
+  float: left;
 }
- .rt p{
-     font-size: 0.6956521739130435rem;
-     color: #45464c;
-     width: 100%;
-     overflow: hidden;
-     text-overflow: ellipsis;
-     white-space: nowrap;
-     height: 1.173913043478261rem;
-     line-height: 1.173913043478261rem;
+.rt p {
+  font-size: 0.64rem;
+  color: #45464c;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  height: 1.1rem;
+  line-height: 1.1rem;
 }
- .rt_con{
-     height: 1.0434782608695652rem;
-     width: 100%;
-     overflow: hidden;
+.rt_con {
+  height: 0.96rem;
+  width: 100%;
+  overflow: hidden;
 }
- .rt_con a{
-     font-size: 0.6086956521739131rem;
-     color: #808080;
-     float: left;
-     height: 1.0434782608695652rem;
-     line-height: 1.0434782608695652rem;
-     width: 2.282608695652174rem;
+.rt_con a {
+  font-size: 0.56rem;
+  color: #808080;
+  float: left;
+  height: 0.96rem;
+  line-height: 0.96rem;
+  width: 2.12rem;
 }
- .rt_con span{
- 	border-radius: 0.0856521739130435rem;
-    float: left;
-    width: 2.93478260869565rem;
-    height: 0.67rem;
-    border: 1px solid #4285F4;
-    text-align: center;
-    font-size: 0.384rem;
-    line-height: 0.5652173913043478rem;
-    color: #4285F4;
-    margin-top: 0.2rem;
+.rt_con span {
+  border-radius: 0.08rem;
+  float: left;
+  width: 2.74rem;
+  height: 0.62rem;
+  border: 1px solid #4285F4;
+  text-align: center;
+  font-size: 0.36rem;
+  line-height: 0.52rem;
+  color: #4285F4;
+  margin-top: 0.18rem;
 }
- .rt_time{
-     font-size: 0.5217391304347826rem;
-     color: #808080;
-     width: 100%;
-     height: 0.9347826086956522rem;
-     line-height: 1.1521739130434783rem;
+.rt_time {
+  font-size: 0.48rem;
+  color: #808080;
+  width: 100%;
+  height: 0.86rem;
+  line-height: 1.08rem;
 }
- .sign_cen{
- 	margin: 0 auto;
-     width: 15.217391304347826rem;
-     height: 9rem;
-     border-radius: 0.1956521739130435rem;
-     background: white;
-     box-shadow: 0rem 0.043478260869565216rem 0.426666rem 0rem rgba(66, 133, 244, 0.27);
-     margin-bottom: 0.5434782608695652rem;
+.sign_cen {
+  margin: 0 auto;
+  width: 14.26rem;
+  height: 9rem;
+  border-radius: 0.18rem;
+  background: white;
+  box-shadow: 0rem 0.04rem 0.38rem 0rem rgba(66, 133, 244, 0.27);
+  margin-bottom: 0.5rem;
 }
- .sign_cen p{
-     display: block;
-     width: 100%;
-     height: 2.739130434782609rem;
-     line-height: 2.739130434782609rem;
-     color: #333333;
-     font-size: 0.6521739130434783rem;
-     text-align: center;
+.sign_cen p {
+  display: block;
+  width: 100%;
+  height: 2.56rem;
+  line-height: 2.56rem;
+  color: #333333;
+  font-size: 0.6rem;
+  text-align: center;
 }
- .sign_img{
-     width: 5.260869565217392rem;
-     height: 5.260869565217392rem;
-     margin: 0 auto;
+.sign_img {
+  width: 4.92rem;
+  height: 4.92rem;
+  margin: 0 auto;
 }
- .sign_foot{
- 	box-shadow: 0rem 0.043478260869565216rem 0.426666rem 0rem rgba(66, 133, 244, 0.27);
- 	margin: 0 auto;
-     width: 15.217391304347826rem;
-     height: 8.217391304347826rem;
-     background: white;
-     border-radius: 0.1956521739130435rem;
+.sign_foot {
+  box-shadow: 0rem 0.04rem 0.38rem 0rem rgba(66, 133, 244, 0.27);
+  margin: 0 auto;
+  width: 14.26rem;
+  height: 7.7rem;
+  background: white;
+  border-radius: 0.18rem;
 }
- .sign_foot p{
-     width: 14.08695652173913rem;
-     margin: 0 auto;
-     line-height: 0.9130434782608695rem;
-     font-size: 0.5652173913043478rem;
-     color: #808080;
+.sign_foot p {
+  width: 13.2rem;
+  margin: 0 auto;
+  line-height: 0.84rem;
+  font-size: 0.52rem;
+  color: #808080;
 }
- .sign_foot p:first-child{
-     width: 14.08695652173913rem;
-     margin: 0 auto;
-     height: 2.6956521739130435rem;
-     line-height: 2.6956521739130435rem;
-     font-size: 0.6521739130434783rem;
-     color: #333;
-     
+.sign_foot p:first-child {
+  width: 13.2rem;
+  margin: 0 auto;
+  height: 2.52rem;
+  line-height: 2.52rem;
+  font-size: 0.6rem;
+  color: #333;
 }
- 

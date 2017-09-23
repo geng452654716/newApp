@@ -1,0 +1,221 @@
+@base:50rem;
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "微软雅黑";
+     -webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color:rgba(255,0,0,0) 
+}
+body{
+    position: relative;
+    overflow-x:hidden ;
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+    -webkit-tap-highlight-color:rgba(255,0,0,0) 
+}
+html,body{
+   height: 100%;
+}
+.wrapper{
+   height: 100%;
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+div{
+    cursor: pointer;
+}
+li{
+    list-style: none;
+    cursor: pointer;
+    cursor: pointer;
+}
+span{
+    cursor: pointer;
+}
+.blue{
+    border-bottom: 4/@base solid #4285f4;
+    color: #4285F4 !important;
+}
+.bluebg{
+    width: 764/@base;
+    height: 292/@base;
+    background: #4285F4;
+    position: relative;
+}
+.data_head{
+    width: 685/@base;
+    height: 269/@base;
+    border-radius: 9/@base;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -1.108695652173913rem;
+    margin-left: -7.304347826086956rem;
+    box-shadow: 0rem 2/@base 19/@base 0rem rgba(66, 133, 244, 0.27);
+}
+.data_con{
+    padding: 116/@base 0 33/@base 0;
+    width: 100%;
+    box-shadow: 0rem 2/@base 19/@base 0rem rgba(66, 133, 244, 0.27);
+}
+.data_con>p{
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    width: 100%;
+    height: 41/@base;
+    color: #45464c;
+    font-size: 34/@base;
+}
+.data_p{
+    font-weight: bold;
+    height: 68/@base;
+    width: 680/@base;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 68/@base;
+    font-size: 30/@base;
+    color: #808080;
+}
+.con_p{
+    width: 680/@base;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 26/@base;
+    color: #808080;
+    padding: 8/@base 0;
+    line-height: 38/@base;
+    height: auto;
+}
+.con_fot{
+   height: 69/@base;
+   width: 690/@base;
+   margin: 0 auto;
+   margin-top: 21/@base;
+}
+.guan,.price{
+    border: 2px solid #4285F4;
+    width: 322/@base;
+    height: 65/@base;
+    text-align: center;
+    line-height: 65/@base;
+    font-size: 32/@base;
+    float: left;
+    border-radius: 5/@base;
+}
+.guan{
+    margin-right: 18/@base;
+    color: #4285F4;
+}
+.price{
+    background: #4285F4;
+    color: white;
+}
+.cont{
+    width: 100%;
+    overflow: hidden;
+    padding: 34/@base 0 ;
+    margin-top: 25/@base;
+    box-shadow: 0rem 2/@base 19/@base 0rem rgba(66, 133, 244, 0.27);
+}
+.cont p{
+    display: block;
+    width: 680/@base;
+    margin: 0 auto;
+    height: 40/@base;
+    line-height: 40/@base;
+    color: #808080;
+    font-size: 26/@base;
+}
+.foot{
+    width: 100%;
+    padding-top: 40/@base;
+    padding-bottom: 1rem;
+}
+.foot p{
+    display: block;
+    width: 680/@base;
+    line-height: 40/@base;
+    font-size: 26/@base;
+    color: #808080;
+    margin: 0 auto;
+}
+ .foot p:last-child{ margin-top: 9/@base;}
+
+ .payment {
+   width: 699/@base;
+   height: 549/@base;
+   padding: 30/@base;
+   box-sizing: border-box;
+   background: #fff;
+   position: fixed;
+   bottom: -21.312rem;
+   z-index: 999;
+   left: 50%;
+   transform: translateX(-50%);
+   border-radius: 8/@base;
+   transition: all .5s;
+ }
+ .payment .title {
+   line-height: 46/@base;
+   color: #494949;
+   font-size: 30/@base;
+ }
+ .payment .xuzhi {
+   color: #4285f4;
+ }
+ .payment .quan strong {
+   color: #f69f07;
+   float: right;
+   font-weight: normal;
+ }
+ .payment .zong strong {
+   font-weight: normal;
+   text-align: right;
+   color: #e2e3e3;
+   float: right;
+   text-decoration: line-through;
+   margin-right: 20/@base;
+ }
+ .payment .zong i {
+   text-align: right;
+   color: #4285f4;
+   font-style: normal;
+   float: right;
+ }
+ .payment li {
+   height: 80/@base;
+   line-height: 80/@base;
+   box-sizing: border-box;
+   border-bottom: 2/@base solid #fafafa;
+   font-size: 26/@base;
+ }
+ .payment .button {
+   margin-top: 69/@base;
+   height: 90/@base;
+   width: 639/@base;
+   line-height: 90/@base;
+   text-align: center;
+   font-size: 34/@base;
+   color: #fff;
+   border-radius: 8/@base;
+   background: #00b90c url('../img/weixin.png') no-repeat left 200/@base center;
+   background-size: 54/@base 44/@base;
+   padding-left: 54/@base;
+   box-sizing: border-box;
+ }
+ .mask {
+   position: fixed;
+   width: 100%;
+   height: 100%;
+   background: rgba(0, 0, 0, 0.4);
+   z-index: 99;
+   left: 0;
+   top: 0;
+   display: none;
+ }

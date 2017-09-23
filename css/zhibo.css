@@ -51,7 +51,7 @@ body {
   line-height: 1.84rem;
   color: #4d4d4d;
   font-size: 0.64rem;
-  background: url(../img/currency.png) no-repeat 0.18rem -4.66rem;
+  background: url(../img/currency.png) no-repeat 0.18rem -4.74rem;
   background-size: 0.72rem;
   font-weight: 600;
 }
@@ -77,15 +77,15 @@ body {
   border: 0.02rem solid rgba(255, 255, 255, 0.3);
   background-color: rgba(0, 0, 0, 0.3);
   position: absolute;
-  top: 0.18rem;
-  right: 0.14rem;
+  top: 0.5rem;
+  right: 0.5rem;
 }
 .huifang {
-  background: url(../img/huifang.png) no-repeat rgba(0, 0, 0, 0.3) 0.32rem 0.2rem;
-  background-size: 0.2rem 0.3rem;
+  background: url(../img/huifang.png) no-repeat rgba(0, 0, 0, 0.3) 0.32rem 0.16rem;
+  background-size: 0.22rem 0.32rem;
 }
 .jijiang {
-  background: url(../img/biao.png) no-repeat rgba(0, 0, 0, 0.3) 0.14rem 0.22rem;
+  background: url(../img/biao.png) no-repeat rgba(0, 0, 0, 0.3) 0.18rem 0.18rem;
   background-size: 0.36rem 0.36rem;
 }
 .ban_zia,
@@ -107,7 +107,7 @@ body {
   margin-top: 0.4rem;
 }
 .ban_zib {
-  font-size: 0.44rem;
+  font-size: 0.48rem;
   color: #666;
   float: right;
   margin-right: 0.34rem;
@@ -116,7 +116,7 @@ body {
 .ban_sp {
   height: 0.72rem;
   width: 100%;
-  border-bottom: 0.1rem solid #f0f0f0;
+  border-bottom: 0.04rem solid #f0f0f0;
   margin-top: 0.2rem;
   padding-bottom: 0.44rem;
 }
@@ -136,7 +136,7 @@ body {
 }
 .ban_sp > strong {
   color: #999;
-  font-size: 0.44rem;
+  font-size: 0.52rem;
   float: left;
   padding-left: 0.34rem;
   font-weight: normal;
@@ -154,9 +154,9 @@ body {
   text-indent: 0.9rem;
   height: 1.32rem;
   line-height: 1.32rem;
-  font-size: 0.4rem;
+  font-size: 0.48rem;
   color: #999999;
-  background: url(../img/index_ren.png) no-repeat center left 0.3rem;
+  background: url(../img/index_ren.png) no-repeat center left 0.26rem;
   background-size: 0.4rem;
 }
 .gao {
@@ -197,15 +197,15 @@ body {
   overflow: hidden;
 }
 .zhi_tu span {
-  text-indent: 0.64rem;
-  width: 1.76rem;
+  text-indent: 0.6rem;
+  width: 1.7rem;
   height: 0.68rem;
   border: 0.02rem solid rgba(255, 255, 255, 0.3);
   line-height: 0.68rem;
   position: absolute;
   top: 0.34rem;
   right: 0.34rem;
-  font-size: 0.4rem;
+  font-size: 0.44rem;
   color: white;
   border-radius: 1.5rem;
   background-color: rgba(0, 0, 0, 0.3);
@@ -226,7 +226,7 @@ body {
 }
 .gao_p {
   height: 0.7rem;
-  font-size: 0.44rem;
+  font-size: 0.48rem;
   color: #666666;
   line-height: 0.7rem;
   padding-left: 0.3rem;
@@ -234,7 +234,7 @@ body {
 .gao_xin {
   height: 1.12rem;
   margin: 0 auto;
-  border-bottom: 0.06rem solid #f0f0f0;
+  border-bottom: 0.04rem solid #f0f0f0;
   padding-left: 0.3rem;
   padding-top: 0.18rem;
   box-sizing: border-box;
