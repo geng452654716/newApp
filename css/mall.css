@@ -255,8 +255,7 @@ header {
   top: 50%;
   left: 50%;
   background: #191d33;
-  margin-top: -5.10869565rem;
-  margin-left: -6.7173913rem;
+  transform: translate(-50%, -50%);
   border-radius: 0.2rem;
 }
 .cou_tit {

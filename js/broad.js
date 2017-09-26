@@ -5,4 +5,10 @@ $(function(){
 			window.location.href="../index/sign.html"
 		}
 	})
+
+	let id = '' + window.location.search.substr(1).split('=')[1];
+
+	ajax('app.php/app_huifang_play',function(data){
+		console.log(data);
+	},{id},'post')
 })

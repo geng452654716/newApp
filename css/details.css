@@ -24,6 +24,22 @@ img {
   width: 100%;
   height: 100%;
 }
+::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #ccc;
+}
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #ccc;
+}
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #ccc;
+}
+:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #ccc;
+}
 div {
   cursor: pointer;
 }
@@ -55,7 +71,6 @@ span {
   border-bottom: 0.04rem solid #ebebeb;
 }
 .nav li {
-  /*width: 33%;*/
   height: 100%;
   margin: 0 1.68rem;
   float: left;
@@ -105,9 +120,9 @@ span {
 }
 .int_zi {
   float: left;
-  width: 4.72rem;
   font-size: 1.1rem;
   color: #ffa100;
+  margin-right: 0.4rem;
 }
 .int_peo {
   float: left;
@@ -194,7 +209,7 @@ span {
   background: #fea201;
   font-size: 0.64rem;
   color: white;
-  line-height: 2.50869565217391304rem;
+  line-height: 2.34rem;
   float: left;
   text-align: center;
   line-height: 2rem;
@@ -241,10 +256,10 @@ span {
   right: 1.4rem;
 }
 .wen {
-  height: 6rem;
+  height: 5.62rem;
   width: 13.32rem;
   margin: 0 auto;
-  border-bottom: 1px solid #dedede;
+  border-bottom: 0.02rem solid #dedede;
   -webkit-appearance: none ;
 }
 .pincon {
@@ -254,7 +269,7 @@ span {
   padding: 0.36rem;
   outline: none;
   resize: none;
-  width: 13rem;
+  width: 12.2rem;
   height: 1.98rem;
   border: 1px solid #ccc;
   border-radius: 0.18rem;

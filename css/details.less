@@ -24,8 +24,27 @@ img{
     width: 100%;
     height: 100%;
 }
+::-webkit-input-placeholder {
+    /* WebKit browsers */
+     color: #ccc;
+ }
+ :-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+     color: #ccc;
+ }
+ ::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+     color: #ccc;
+ }
+ :-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+     color: #ccc;
+ }
 div{ cursor: pointer;}
-li{list-style: none; cursor: pointer; cursor: pointer;}
+li{
+    list-style: none; 
+    cursor: pointer;
+}
 span{ cursor: pointer;}
 .blue{
     border-bottom: 4/@base solid #4285f4;
@@ -48,7 +67,6 @@ span{ cursor: pointer;}
     border-bottom: 2/@base solid #ebebeb;
 }
 .nav li{
-    /*width: 33%;*/
     height: 100%;
    margin: 0 84/@base ;
     float: left;
@@ -98,9 +116,9 @@ span{ cursor: pointer;}
 }
 .int_zi{
     float: left;
-    width: 236/@base;
     font-size: 55/@base;
     color: #ffa100;
+    margin-right: 20/@base;
 }
 .int_peo{
    float: left;
@@ -186,7 +204,7 @@ span{ cursor: pointer;}
    font-size: 32/@base;
    color: white;
    text-align: center;
-   line-height:2.50869565217391304rem;
+   line-height:117/@base;
    float: left;
    text-align: center;
    line-height: 100/@base;
@@ -236,10 +254,10 @@ span{ cursor: pointer;}
 }
 
 .wen {
-   height: 6rem;
+   height: 281/@base;
    width: 666/@base;
    margin: 0 auto;
-   border-bottom: 1px solid #dedede;
+   border-bottom: 1/@base solid #dedede;
    -webkit-appearance : none ; 
 }
 .pincon{ position: relative;}
@@ -247,7 +265,7 @@ span{ cursor: pointer;}
    padding: 18/@base;
    outline: none;
    resize: none;
-   width: 13rem;
+   width: 610/@base;
    height: 99/@base;
    border: 1px solid #ccc;
    border-radius: 9/@base;
