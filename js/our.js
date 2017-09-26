@@ -9,12 +9,30 @@ $(function(){
 		window.location.href="code.html"
 	})
 	$(".follow").click(function(){
-		window.location.href="userfollow.html"
+		if(user){
+			window.location.href="userfollow.html"
+		}else{
+			window.location.href="signin.html"
+		}
 	})
 	$(".setup").click(function(){
-		window.location.href="settings.html"
+		if(user){
+			window.location.href="settings.html"
+		}else{
+			window.location.href="signin.html"
+		}
 	})
 	$(".head").click(function(){
-		window.location.href="signin.html"
+		if(user){
+			window.location.href="userdata.html"
+		}else{
+			window.location.href="signin.html"
+		}
 	})
+
+	if(user){
+		$('.userInfo').html(user);
+	}else{
+		$('.userInfo').html('点击此处登录/注册');
+	}
 })

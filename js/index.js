@@ -22,7 +22,7 @@ $(function () {
 						本周直播推荐
 					</div>
 					<div class="ban_tu">
-						<img src="${imgUrl + data.logo}" />
+						<img src="${imgUrl + data.weblogo}" />
 						<div class="ban_shi jijiang">${data.zb_text}</div>
 					</div>
 					<div class="ban_zi clear">
@@ -48,7 +48,7 @@ $(function () {
 					div.className = 'zhi_son';
 					let str = `
 						<div class="zhi_tu">
-							<img src="${imgUrl + e.logo}">
+							<img src="${imgUrl + e.weblogo}">
 							<span class='huifang'>${e.zb_text}</span>
 						</div>
 						<div class="gao_tit">

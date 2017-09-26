@@ -56,7 +56,7 @@ html {
   background: #fff;
 }
 .user .small_icon .follow {
-  background: url('../img/guanzhu.png') no-repeat;
+  background: url('../img/guanzhu.png') no-repeat left top 0.06rem;
   background-size: 0.6rem 0.5rem;
   margin-right: 0.5rem;
 }

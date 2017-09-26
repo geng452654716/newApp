@@ -3,6 +3,7 @@ $(function(){
     var lis = teacherList.getElementsByTagName('li');
     let startX = null;
     let next = null;
+    //滑动
     for(let i = 0;i<lis.length;i++){
         lis[i].left = 0;
         lis[i].addEventListener('touchstart',function(e){
@@ -15,21 +16,6 @@ $(function(){
             this.style.transition = null;
             next = this;
         })
-        // lis[i].addEventListener('touchmove',function(e){
-        //     let endX = e.changedTouches[0].clientX;
-        //     if(startX - endX > 50){
-        //         if(this.left <= -127){
-        //             this.left = -127;
-        //         }
-        //         this.style.transform  = `translateX(${(this.left-=4) /50}rem)`;
-        //     }
-        //     if(endX - startX < 50){
-        //         if(this.left >= 0){
-        //             this.left = 0;
-        //         }
-        //         this.style.transform  = `translateX(${(this.left+=4) / 50 }rem)`;
-        //     }
-        // })
         lis[i].addEventListener('touchend',function(e){
             next == null;
             let endX = e.changedTouches[0].clientX;
@@ -45,4 +31,13 @@ $(function(){
             }
         })
     }
+
+
+    //判断用户名
+    $('.user .name').html(user);
+
+    //请求关注列表接口
+    ajax('app.php/code_list',function(data){
+        console.log(data);
+    },{},'post')
 })
