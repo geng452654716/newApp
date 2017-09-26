@@ -1,12 +1,24 @@
 $(function(){
 	$(".order").click(function(){
-		window.location.href="dindan.html"
+		if(user){
+			window.location.href="dindan.html"
+		}else{
+			window.location.href="signin.html"
+		}
 	})
 	$(".coup").click(function(){
-		window.location.href="coupon.html"
+		if(user){
+			window.location.href="coupon.html"
+		}else{
+			window.location.href="signin.html"
+		}
 	})
 	$(".code").click(function(){
-		window.location.href="code.html"
+		if(user){
+			window.location.href="code.html"
+		}else{
+			window.location.href="signin.html"
+		}
 	})
 	$(".follow").click(function(){
 		if(user){
@@ -25,6 +37,14 @@ $(function(){
 	$(".head").click(function(){
 		if(user){
 			window.location.href="userdata.html"
+		}else{
+			window.location.href="signin.html"
+			collection.html
+		}
+	})
+	$('.collection')[0].addEventListener('touchstart',function() {
+		if(user){
+			window.location.href="collection.html"
 		}else{
 			window.location.href="signin.html"
 		}

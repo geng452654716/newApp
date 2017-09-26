@@ -15,6 +15,11 @@ body{
 html,body{
    height: 100%;
 }
+.clear::after{
+    content: '';
+    display: block;
+    clear: both;
+}
 a{
     text-decoration: none;
     cursor: pointer;
@@ -108,7 +113,7 @@ input[type=submit],input[type=reset],input[type=button],input[type=text]{
    height: 32/@base;
    line-height: 32/@base;
    text-indent: 36/@base;
-   background: url(../img/our.png) no-repeat -0rem -2.57rem;
+   background: url(../img/our.png) no-repeat -0rem -118/@base;
    background-size: 32/@base;
 }
 .lines{
@@ -236,7 +241,7 @@ input[type=submit],input[type=reset],input[type=button],input[type=text]{
 }
 .code_btn{
     width: 105/@base;
-    height:1.9865217391304348rem;
+    height:90/@base;
     float: left;
     margin-left: -0.18rem;
     background: #4285F4;
@@ -295,4 +300,13 @@ footer dl:nth-child(3) img{
 footer dl:last-child img{
    width: 40/@base;
    height: 44/@base;
+}
+.message{
+    color: #4d4d4d;
+    height: 25/@base;
+    font-size: 22/@base;
+    line-height: 25/@base;
+    position: absolute;
+    left: 50/@base;
+    top: 180/@base;
 }

@@ -5,10 +5,9 @@ $(function(){
         click: true,
     })
     scroll.refresh();
-    document.addEventListener('click',function(){
+    document.addEventListener('touchstart',function(){
         scroll.refresh();
     })
-
     
 })
 
