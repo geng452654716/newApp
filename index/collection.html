@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>Softline</title>
+	<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+	<!-- <script src="https://unpkg.com/better-scroll@1.0.1/dist/bscroll.min.js"></script> -->
+	<script src="../js/bscroll.min.js"></script>
+	<script type="text/javascript">
+		(function (deviceWidth, fontSize) {
+			deviceWidth = deviceWidth || 640;
+			fontSize = fontSize || 100;
+			var metas = document.querySelectorAll('meta');
+			var viewPort = [].slice.call(metas).filter((item) => {
+				return item.name === 'viewport';
+			})[0];
+			if (!viewPort) {
+				var meta = document.createElement('meta');
+				meta.name = 'viewport';
+				viewPort = document.head.insertBefore(meta, metas[metas.length - 1].nextElementSibling);
+			}
+			var scale = 1 / window.devicePixelRatio;
+			viewPort.content = `width=device-width, initial-scale=${scale}, maximum-scale=${scale}, minimum-scale=${scale}, user-scalable=no`;
+			var html = document.documentElement;
+			var fn = function () {
+				html.style.fontSize = (html.clientWidth / deviceWidth) * fontSize + 'px';
+			};
+			fn();
+			window.addEventListener('resize', fn);
+		})(750, 50);
+	</script>
+	<link rel="stylesheet" type="text/css" href="../css/collection.css" />
+
+	<script src="../js/public.js"></script>
+	<script src="../js/collection.js"></script>
+</head>
+
+<body class="scroll">
+	<div class="wrapper">
+		<div class="content">
+
+			<!-- 用户头像 -->
+			<div class="user">
+				<div class="tx">
+					<img src="../img/tu.jpg" alt="">
+				</div>
+				<div class="name">昵称昵称</div>
+				<div class="small_icon">
+					<span class="follow">22</span>
+					<span class="day">24天</span>
+				</div>
+				<div class="jt"></div>
+			</div>
+
+			<div class="head">
+				<ul class="tab">
+					<li class='zhi'>
+						<a class="blue">直播课</a>
+					</li>
+					<li class='tui'>
+						<a>推荐课</a>
+					</li>
+					<li class='zi'>
+						<a>资料集</a>
+					</li>
+					<li class='ke'>
+						<a>微课堂</a>
+					</li>
+				</ul>
+			</div>
+			<div class="default">
+				<div class="recom">
+					推荐搜索
+				</div>
+				<a>GRE考试</a>
+				<a>TOEGFL考试</a>
+				<a>金工申请</a>
+			</div>
+			<ul class="option">
+				<li class="broad" style="display: block;">
+					<div class="details"></div>
+					<div class="wrong">
+						<img src="../img/error.png" />
+					</div>
+				</li>
+				<li class="course">
+					<div class="recon"></div>
+					<div class="wrong">
+						<img src="../img/error.png" />
+					</div>
+				</li>
+				<li class="dataset">
+					<div class="dat">
+						<div class="dat_con">
+							<div class="con_fl">
+								<img src="../img/tu.jpg" />
+							</div>
+							<div class="con_rt">
+								<p>杜克女神带你走111进世界银行啦啦啦</p>
+								<span>讲师名</span>
+								<div class="con_tit">简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介</div>
+								<div class="price">
+									<a>¥</a>6</div>
+							</div>
+						</div>
+						<div class="dat_con">
+							<div class="con_fl">
+								<img src="../img/tu.jpg" />
+							</div>
+							<div class="con_rt">
+								<p>杜克女神带你走进世界银行啦啦啦</p>
+								<span>讲师名</span>
+								<div class="con_tit">简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介</div>
+								<div class="price">
+									<a>¥</a>6</div>
+							</div>
+						</div>
+						<div class="dat_con">
+							<div class="con_fl">
+								<img src="../img/tu.jpg" />
+							</div>
+							<div class="con_rt">
+								<p>杜克女神带你走进世界银行啦啦啦</p>
+								<span>讲师名</span>
+								<div class="con_tit">简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介</div>
+								<div class="price">
+									<a>¥</a>6</div>
+							</div>
+						</div>
+						<div class="dat_con">
+							<div class="con_fl">
+								<img src="../img/tu.jpg" />
+							</div>
+							<div class="con_rt">
+								<p>杜克女神带你走进世界银行啦啦啦</p>
+								<span>讲师名</span>
+								<div class="con_tit">简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介</div>
+								<div class="price">
+									<a>¥</a>6</div>
+							</div>
+						</div>
+					</div>
+					<div class="wrong">
+						<img src="../img/error.png" />
+					</div>
+				</li>
+				<li class="micro">
+					<div class="wrong">
+						<img src="../img/error.png" />
+					</div>
+					<div class="wei">
+						<div class="microclass">
+							<p>GRE Sub化学 满分男神公开课</p>
+							<div class="mic">Monica冯缘·GRE满分选手</div>
+							<span>¥9.99</span>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</body>
+
+</html>

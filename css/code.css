@@ -15,6 +15,11 @@ html,
 body {
   height: 100%;
 }
+.clear::after {
+  content: '';
+  display: block;
+  clear: both;
+}
 a {
   text-decoration: none;
   cursor: pointer;
@@ -115,7 +120,7 @@ input[type=text] {
   height: 0.64rem;
   line-height: 0.64rem;
   text-indent: 0.72rem;
-  background: url(../img/our.png) no-repeat 0rem -2.57rem;
+  background: url(../img/our.png) no-repeat 0rem -2.36rem;
   background-size: 0.64rem;
 }
 .lines {
@@ -242,7 +247,7 @@ input[type=text] {
 }
 .code_btn {
   width: 2.1rem;
-  height: 1.9865217391304348rem;
+  height: 1.8rem;
   float: left;
   margin-left: -0.18rem;
   background: #4285F4;
@@ -299,4 +304,13 @@ footer dl:nth-child(3) img {
 footer dl:last-child img {
   width: 0.8rem;
   height: 0.88rem;
+}
+.message {
+  color: #4d4d4d;
+  height: 0.5rem;
+  font-size: 0.44rem;
+  line-height: 0.5rem;
+  position: absolute;
+  left: 1rem;
+  top: 3.6rem;
 }

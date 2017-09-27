@@ -15,25 +15,24 @@ $(function () {
 	ajax('app.php/app_index', function (data) {
 		if (data.rt === 1) {
 			if(data.data.course_live){
-				let data = data.data.course_live;
-				console.log(data);
+				let Data = data.data.course_live;
 				let str = `
 					<div class="ban_tit">
 						本周直播推荐
 					</div>
 					<div class="ban_tu">
-						<img src="${imgUrl + data.logo}" />
-						<div class="ban_shi jijiang">${data.zb_text}</div>
+						<img src="${imgUrl + Data.weblogo}" />
+						<div class="ban_shi jijiang">${Data.zb_text}</div>
 					</div>
 					<div class="ban_zi clear">
-						<a class="ban_zia">${data.name}</a>
-						<a class="ban_zib">${data.start_time}</a>
+						<a class="ban_zia">${Data.name}</a>
+						<a class="ban_zib">${Data.start_time}</a>
 					</div>
 					<div class="ban_sp">
-						<strong>${data.teacher_name}</strong>
-						<span>套课：${data.count}课时</span>
+						<strong>${Data.teacher_name}</strong>
+						<span>套课：${Data.count}课时</span>
 						<p>
-							${data.price === '0.00'?'免费':'<a class="small">¥</a>'+data.price}
+							${Data.price === '0.00'?'免费':'<a class="small">¥</a>'+Data.price}
 						</p>
 					</div>
 					<div class="ban_bao">1000人已报名</div>
@@ -48,7 +47,7 @@ $(function () {
 					div.className = 'zhi_son';
 					let str = `
 						<div class="zhi_tu">
-							<img src="${imgUrl + e.logo}">
+							<img src="${imgUrl + e.weblogo}">
 							<span class='huifang'>${e.zb_text}</span>
 						</div>
 						<div class="gao_tit">

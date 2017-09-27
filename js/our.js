@@ -1,20 +1,58 @@
 $(function(){
 	$(".order").click(function(){
-		window.location.href="dindan.html"
+		if(user){
+			window.location.href="dindan.html"
+		}else{
+			window.location.href="signin.html"
+		}
 	})
 	$(".coup").click(function(){
-		window.location.href="coupon.html"
+		if(user){
+			window.location.href="coupon.html"
+		}else{
+			window.location.href="signin.html"
+		}
 	})
 	$(".code").click(function(){
-		window.location.href="code.html"
+		if(user){
+			window.location.href="code.html"
+		}else{
+			window.location.href="signin.html"
+		}
 	})
 	$(".follow").click(function(){
-		window.location.href="userfollow.html"
+		if(user){
+			window.location.href="userfollow.html"
+		}else{
+			window.location.href="signin.html"
+		}
 	})
 	$(".setup").click(function(){
-		window.location.href="settings.html"
+		if(user){
+			window.location.href="settings.html"
+		}else{
+			window.location.href="signin.html"
+		}
 	})
 	$(".head").click(function(){
-		window.location.href="signin.html"
+		if(user){
+			window.location.href="userdata.html"
+		}else{
+			window.location.href="signin.html"
+			collection.html
+		}
 	})
+	$('.collection')[0].addEventListener('touchstart',function() {
+		if(user){
+			window.location.href="collection.html"
+		}else{
+			window.location.href="signin.html"
+		}
+	})
+
+	if(user){
+		$('.userInfo').html(user);
+	}else{
+		$('.userInfo').html('点击此处登录/注册');
+	}
 })

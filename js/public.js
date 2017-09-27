@@ -5,11 +5,18 @@ $(function(){
         click: true,
     })
     scroll.refresh();
-    document.addEventListener('click',function(){
+    document.addEventListener('touchstart',function(){
         scroll.refresh();
     })
+    
 })
 
+let user = '';
+if(getCookie('userInfo')!==-1){
+    let userInfo = JSON.parse(getCookie('userInfo'));
+    user = userInfo.phone;
+    user = user.substr(0,3) + '****' + user.substr(7)
+}
 
 let imgUrl = 'http://oss.softlinkonline.cn/pcimg/'
 
@@ -29,7 +36,7 @@ function setCookie(key,value,time){
     if(time){
         var date = new Date;
         date.setDate(date.getDate()+time);
-        document.cookie = key + '=' + JSON.stringify(value) + ';expires' + date;
+        document.cookie = key + '=' + JSON.stringify(value) + ';expires=' + date;
     }else{
         document.cookie = key + '=' + JSON.stringify(value);
     }

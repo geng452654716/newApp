@@ -49,6 +49,7 @@ $(function () {
 	
 
 	var shortAdopt = null;
+	var codeAdopt = null;
 	var timer = null;
 	var time = 60;
 	var onoff = true;
@@ -93,6 +94,12 @@ $(function () {
 
 	//验证码输入判断
 	$('#code')[0].addEventListener('input',function(){
+		codeAdopt = $(this).val().length == 6;
+		if(codeAdopt){
+			$('.message').html('');
+		}else{
+			$('.message').html('请输入正确的验证码');
+		}
 		blue();
 		code = $(this).val();
 	})
@@ -100,17 +107,18 @@ $(function () {
 
 	//登陆按钮
 	$('.inpbtn input')[0].addEventListener('touchstart', function () {
-		if (accAdopt && $('#password').val() !== '' && target === 'acc') {
+		if (blue() === 'password') {
 			ajax('app.php/d_login', function (data) {
-				setCookie('userInfo', data.data.session_user)
+				setCookie('userInfo', data.data.session_user,30);
+				history.go(-1);
 			}, { name, pwd }, 'post');
 		}
 
-		if(shortAdopt && $('#code').val() !== '' && target === 'short'){
+		if(blue() === 'code'){
 			ajax('app.php/yzm_login', function (data) {
-				console.log(data);
 				if(data.rt == 1){
-					setCookie('userInfo', data.data.session_user);
+					setCookie('userInfo', data.data.session_user,30);
+					history.go(-1);
 				}
 			}, { phone, code }, 'post');
 		}
@@ -122,15 +130,17 @@ $(function () {
 			$('.inpbtn input').css({
 				background: '#4285F4',
 			})
+			return 'password';
 		} else {
 			$('.inpbtn input').css({
 				background: '#d8d8d8',
 			})
 		}
-		if(shortAdopt && $('#code').val() !== ''){
+		if(shortAdopt && codeAdopt){
 			$('.inpbtn input').css({
 				background: '#4285F4',
 			})
+			return 'code';
 		}else {
 			$('.inpbtn input').css({
 				background: '#d8d8d8',
