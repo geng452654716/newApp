@@ -18,6 +18,26 @@ $(function(){
 		});
 	})
 	changeYouHui();
+	imgUrl="http://oss.softlinkonline.cn/pcimg/";
+	function timer(dat){
+		var t=dat*1000;
+		var hour = Math.floor(t / 1000 / 60 / 60 % 24);
+		var min = Math.floor(t / 1000 / 60 % 60);
+		var sec = Math.floor(t / 1000 % 60);
+		/*console.log(min)
+		console.log(sec)*/
+		if(hour < 10) {
+			hour = "0" + hour;
+		}
+		if(min < 10) {
+			min = +min;
+		}
+		if(sec < 10) {
+			sec = sec;
+		}
+		var yi=hour+":"+min+":"+sec
+		return yi
+	}
 	var you = true;
 	$('.youhui')[0].addEventListener('touchstart',function(){
 		you = !you;
@@ -29,7 +49,9 @@ $(function(){
 			bottom:'-19.6rem'
 		});
 	})
-	
+	var str = location.href; 
+	var num = str.lastIndexOf("/");
+	var str=str.substring(num+1,str.length);
 	function changeYouHui(){
 		if(you){
 			$('.button').addClass('quan').removeClass('weixin');
@@ -43,4 +65,71 @@ $(function(){
 			$('.youhui strong').html('不使用优惠券');
 		}
 	}
+	$.ajax({
+		type:"post",
+		url:"http://ceshi.softlinkonline.cn/app.php/app_details_data",
+		async:true,
+		dataType:"json",
+		data:{
+			id:str
+		},success:function(data){
+			var deta=data.data;
+			console.log(deta)
+			var cod=deta.Catalogdata;
+			var comment=deta.com_data;
+			if(comment.length>0){
+				$(".meiyou").hide()
+			}else{
+				$(".meiyou").show()
+			}
+			$(".banner img").attr("src",imgUrl+deta.logo)
+			$(".int_tit").html(deta.name)
+			$(".int_p").html(deta.teacher.name)
+			$("#pin").attr("tid",deta.id)
+			var morng="";
+			var str1 = deta.price
+				var str2 =cod[1].price
+				str1 = str1.replace(/^(\d+)\.(\d+)/,function($0,$1,$2){
+					if($2 === '00'){
+						return $1
+					}
+				})
+//				console.log(str1)
+				str2 = str2.replace(/^(\d+)\.(\d+)/,function($0,$1,$2){
+					if($2 === '00'){
+						return $1
+					}
+				})
+			if(str2){
+				morng='<a class="small">¥</a>'+str2+" - "
+			}else{
+				morng=""
+			}
+			$(".int_zi").html(morng+'<a class="small">¥</a>'+str1)
+			$(".int_img>img").attr("src",imgUrl+deta.course_desc)
+			for (var i=0;i<cod.length;i++) {
+				var mathe=i+1;
+				var codlist=`<div class="cataloga" id="${cod[i].id}">
+						<div class="cat_tit">课时${mathe}:${cod[i].name}</div>
+						<div class="cat_fot">
+							<a class="cat_time">${timer(cod[i].create_time)}</a>
+							<a class="cat_name">1000+已报名</a>
+						</div>
+						<span><img src="../img/no.png"></span>
+					</div>`;
+					$(".catalog").append(codlist)
+			}
+			for(var i=0;i<comment.length;i++){
+				var com=`<div class="com">
+							<div class="conm_fl"><img src="../img/tu.jpg" /></div>
+							<div class="com_rt">
+								<dd>${comment[i].name?comment[i].name:comment[i].phone}</dd>
+								<h3>${comment[i].content} </h3>
+								<div class="qi">${comment[i].create_time}</div>
+							</div>
+						</div>`;
+				$(".cent").html(com)
+			}
+		}
+	});
 })

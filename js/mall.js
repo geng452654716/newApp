@@ -1,4 +1,5 @@
 $(function () {
+	var imgUrl="http://oss.softlinkonline.cn/pcimg/";
 	var wrapper = document.getElementsByClassName('wrapper')[0];
 	let scroll = new BScroll(wrapper, {
 		scrollY: true,
@@ -56,7 +57,39 @@ $(function () {
 	$(".morev")[0].addEventListener('touchstart',function () {
 		window.location.href = "Micro.html"
 	})
-	$(document).on("click", ".pre_con", function () {
-		window.location.href = "details.html"
+	$.ajax({
+		type:"post",
+		url:"http://ceshi.softlinkonline.cn/app.php/recommended_courses",
+		async:true,
+		dataType:"json",
+		success:function(data){
+			console.log(data)
+			var hop=data.data.course_data;
+			for (var i=0;i<hop.length;i++) {
+				var str1 = hop[i].price
+				var str2 = hop[i].kg_price
+				str1 = str1.replace(/^(\d+)\.(\d+)/,function($0,$1,$2){
+					if($2 === '00'){
+						return $1
+					}
+				})
+//				console.log(str1)
+				str2 = str2.replace(/^(\d+)\.(\d+)/,function($0,$1,$2){
+					if($2 === '00'){
+						return ' - '+'<a class="small">¥</a>'+$1
+					}
+				})
+				var str='<div class="pre_con" id="'+hop[i].id+'"><div class="pre_igm"><img src="'+imgUrl+hop[i].logo+'" /></div><p>'+hop[i].name+'</p><div><strong>讲师名</strong><span><a class="small">¥</a>'+str1+str2+'</span></div></div>';
+				$(".prese").append(str)
+				
+			}
+		}
+	});	
+	$(document).on("touchend",".jin .look",function(){
+		window.location.href="boutique.html"
+	})
+	
+	$(document).on("touchend", ".pre_con", function () {
+		window.location.href = "details.html?id/"+$(this).attr("id")
 	})
 })

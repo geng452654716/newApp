@@ -1,0 +1,170 @@
+  <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="screen-orientation" content="portrait" />
+    <meta name="full-screen" content="yes">
+    <meta name="format-detection" content="telephone=no,email=no">
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/live.css">
+    <title>Softlink</title>
+    <script>
+        (function (deviceWidth, fontSize) {
+            deviceWidth = deviceWidth || 640;
+            fontSize = fontSize || 100;
+            var metas = document.querySelectorAll('meta');
+            var viewPort = [].slice.call(metas).filter((item) => {
+                return item.name === 'viewport';
+            })[0];
+            if (!viewPort) {
+                var meta = document.createElement('meta');
+                meta.name = 'viewport';
+                viewPort = document.head.insertBefore(meta, metas[metas.length - 1].nextElementSibling);
+            }
+            var scale = 1 / window.devicePixelRatio;
+            viewPort.content = `width=device-width, initial-scale=${scale}, maximum-scale=${scale}, minimum-scale=${scale}, user-scalable=no`;
+            var html = document.documentElement;
+            var fn = function () {
+                html.style.fontSize = (html.clientWidth / deviceWidth) * fontSize + 'px';
+            };
+            fn();
+            window.addEventListener('resize', fn);
+        })(750, 50);
+    </script>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://unpkg.com/better-scroll@1.0.1/dist/bscroll.min.js"></script>
+    <script src="../js/playback.js"></script>
+    <script src="../js/public.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="content">
+            <!-- 视屏 -->
+            <div class="videoWarp">
+                <video src=""></video>
+                <div class="prompt">距离开课还有<span>24</span>分钟</div>
+            </div>
+            <!-- 讲师 -->
+            <div class="teacher_warp">
+                <div class="title">
+                    本期讲师
+                </div>
+                <div class="teacher clear">
+                    <div class="tx">
+                        <img src="../img/tu.jpg" alt="">
+                    </div>
+                    <div class="name">
+                        <h4>Monica</h4>
+                        <span>GRE满分选手</span>
+                    </div>
+                    <div class="guanzhu">+关注</div>
+                </div>
+            </div>
+            <!-- 导航 -->
+            <div class="nav">
+                <div class="active">课程内容</div>
+                <div>课程列表</div>
+                <div>课程公告</div>
+            </div>
+
+            <!-- 课程内容 -->
+            <div class="class_content list">
+                <div class="title">
+                    第一课：GRE考试整体概述
+                </div>
+                <ul>
+                    <li><span>1、</span>
+                        <p>在GPA有劣势的情况下，提升背景的方式有哪些？</p>
+                    </li>
+                    <li><span>2、</span>
+                        <p>实习与科研，孰轻孰重，是否存在完美的结合点？</p>
+                    </li>
+                    <li><span>3、</span>
+                        <p>在转专业申请上，理工科背景同学都有哪些选择？</p>
+                    </li>
+                    <li><span>4、</span>
+                        <p>如何针对自己的情况和目标学校专业进行有效的时间规划？</p>
+                    </li>
+                    <li><span>5、</span>
+                        <p>美国管理科学与工程的全方位申请解析？</p>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- 课程列表 -->
+            <div class="class_list list">
+                <ul>
+                    <li class="active">
+                        <p>第一课：GRE备考整体概述</p>
+                        <div class="small_icon">
+                            <time>01:30:00</time>
+                            <span>1000+已报名</span>
+                        </div>
+                        <a href="#">
+                            <div class="startPlay"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <p>第二课：GRE阅读</p>
+                        <div class="small_icon">
+                            <time>01:30:00</time>
+                            <span>1000+已报名</span>
+                        </div>
+                        <a href="#">
+                            <div class="startPlay"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <p>第三课：GRE填空</p>
+                        <div class="small_icon">
+                            <time>01:30:00</time>
+                            <span>1000+已报名</span>
+                        </div>
+                        <a href="#">
+                            <div class="startPlay"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <p>第四课：GRE写作</p>
+                        <div class="small_icon">
+                            <time>01:30:00</time>
+                            <span>1000+已报名</span>
+                        </div>
+                        <a href="#">
+                            <div class="startPlay"></div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- 课程公告 -->
+            <div class="class_notice list">
+                <div class="xuzhi">
+                    <div class="title">在线课程须知</div>
+                    <ul>
+                        <li><span>1、</span>
+                            <p>课程为在线课程，购买后可反复在线观看;</p>
+                        </li>
+                        <li><span>2、</span>
+                            <p>课程视频内容，购买后三个月有效，请您尽快学习观看；</p>
+                        </li>
+                        <li><span>3、</span>
+                            <p>课程所有资料，版权永久性SoftLink所有，请勿外传； </p>
+                        </li>
+                        <li><span>4、</span>
+                            <p>虚拟商品，一经购买，不可退换。</p>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
