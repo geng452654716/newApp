@@ -23,10 +23,10 @@ $(function(){
 	//				console.log(str1)
 					str2 = str2.replace(/^(\d+)\.(\d+)/,function($0,$1,$2){
 						if($2 === '00'){
-							return " - "+'<a class="small">¥</a>'+$1
+							return $1+" - "+'<a class="small">¥</a>'
 						}
 					})
-					var str='<div class="recon_box" id="'+exa[i].id+'"><div class="box_fl"><img src="http://oss.softlinkonline.cn/pcimg/'+exa[i].logo+'"></div><div class="box_rt"><p>'+exa[i].name+'</p><span>'+exa[i].teachername+'</span><div class="box_fot"><dd><a class="small">¥</a>'+str1+str2+'</dd><dt>1000人浏览</dt></div></div></div>';
+					var str='<div class="recon_box" id="'+exa[i].id+'"><div class="box_fl"><img src="http://oss.softlinkonline.cn/pcimg/'+exa[i].logo+'"></div><div class="box_rt"><p>'+exa[i].name+'</p><span>'+exa[i].teachername+'</span><div class="box_fot"><dd><a class="small">¥</a>'+str2+str1+'</dd><dt>1000人浏览</dt></div></div></div>';
 					$(".Examination").append(str)
 				}
 			}

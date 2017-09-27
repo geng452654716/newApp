@@ -77,6 +77,7 @@ $(function(){
 			console.log(deta)
 			var cod=deta.Catalogdata;
 			var comment=deta.com_data;
+			console.log(comment)
 			if(comment.length>0){
 				$(".meiyou").hide()
 			}else{
@@ -88,24 +89,33 @@ $(function(){
 			$("#pin").attr("tid",deta.id)
 			var morng="";
 			var str1 = deta.price
-				var str2 =cod[1].price
-				str1 = str1.replace(/^(\d+)\.(\d+)/,function($0,$1,$2){
-					if($2 === '00'){
-						return $1
-					}
-				})
-//				console.log(str1)
-				str2 = str2.replace(/^(\d+)\.(\d+)/,function($0,$1,$2){
-					if($2 === '00'){
-						return $1
-					}
-				})
+			if(cod.length>1){
+				if(cod[1].price==undefined||!(cod[1].price)){
+					str2=false
+				}else{
+					var str2 =cod[1].price;
+					str2 = str2.replace(/^(\d+)\.(\d+)/,function($0,$1,$2){
+						if($2 === '00'){
+							return $1
+						}
+					})
+				}
+			}else{
+				str2=false
+			}
+			str1 = str1.replace(/^(\d+)\.(\d+)/,function($0,$1,$2){
+				if($2 === '00'){
+					return $1
+				}
+			})
 			if(str2){
 				morng='<a class="small">¥</a>'+str2+" - "
 			}else{
 				morng=""
 			}
-			$(".int_zi").html(morng+'<a class="small">¥</a>'+str1)
+			var cen=morng+'<a class="small">¥</a>'+str1;
+			console.log(cen)
+			$(".int_zi").html(cen)
 			$(".int_img>img").attr("src",imgUrl+deta.course_desc)
 			for (var i=0;i<cod.length;i++) {
 				var mathe=i+1;
