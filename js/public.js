@@ -64,3 +64,15 @@ function getCookie(key){
 function removeCookie(key,value) {
     setCookie(key,value,-1);
 }
+
+//全局状态，关注数量
+ajax('app.php/follow_list',function(data){
+    if(data.rt === 1){
+        const Data = data.data.follow_list;
+        if(Data){
+            sessionStorage.setItem('followList_length',Data.length);
+        }else{
+            sessionStorage.setItem('followList_length',0);
+        }
+    }
+},{},'post')

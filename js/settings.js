@@ -6,5 +6,6 @@ $(function(){
     $('.button')[0].addEventListener('touchstart',function(){
         removeCookie('userInfo');
         history.go(-1);
+        sessionStorage.clear();
     })
 })
