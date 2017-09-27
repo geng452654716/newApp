@@ -13,7 +13,6 @@ html {
 }
 .wrapper {
   height: 100%;
-  width:16rem;
 }
 header {
   width: 100%;
@@ -110,7 +109,7 @@ header {
   overflow: hidden;
   white-space: nowrap;
 }
-.pre_con div:last-child {
+.pre_con div {
   margin-top: -13px;
 }
 .pre_con strong {
