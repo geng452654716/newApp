@@ -30,7 +30,7 @@ html {
   width: 100%;
   transform-origin: left bottom;
   position: absolute;
-  left: -5px;
+  left: -0.24rem;
   top: 0;
   z-index: 99;
 }

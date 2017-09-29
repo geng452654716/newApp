@@ -226,6 +226,10 @@ $(function () {
                     videoBox.style.background = '#000';
                     videoBox.style.transform = 'rotate(90deg)';
                     videoBox.style.top = -750 / 50 + 'rem';
+                    $('.content').css({
+                        height:innerHeight,
+                        overflow:'hidden',
+                    })
                 } else {
                     H = smallH;
                     W = smallW;
@@ -237,12 +241,12 @@ $(function () {
                     this.style.bottom = 20 / 50 + 'rem';
                     this.style.backgroundImage = 'url(../img/full.png)';
 
-                    
                     videoBox.style.height = null;
                     videoBox.style.width = null;
                     videoBox.style.background = null;
                     videoBox.style.transform = null;
                     videoBox.style.top = 0;
+                    $('.content').css(null)
                 }
                 full = !full;
             })
