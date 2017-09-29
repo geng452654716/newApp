@@ -51,6 +51,7 @@ $(function() {
 				$(".name h4").html(data.teacher.name)
 				$(".name span").html(data.teacher.title)
 				$(".guanzhu").html(`${data.is_follow === 1?'已关注':'+关注'}`)
+				$(".guanzhu").attr("tid",data.teacher.id)
 				for(var i = 0; i < cod.length; i++) {
 					var a=i+1;
 					var stri = ` <li class="${data.play_data.nowid===cod[i].id?'active':''}" id="${cod[i].id}" isplay="${cod[i].is_pay}">
@@ -72,6 +73,76 @@ $(function() {
 			}
 		});
 	} else {
-
+		$.ajax({
+			type: "post",
+			url: "http://ceshi.softlinkonline.cn/app.php/app_play",
+			async: true,
+			dataType: "json",
+			data: {
+				s_vedio: num,
+				course: type
+			},
+			success: function(data) {
+				var data = data.data;
+				console.log(data)
+				var cod = data.datalist;
+				$("video").attr("src", 'http://oss.softlinkonline.cn/public/' + data.play_data.video_url);
+				$(".teacher_warp .title").html(data.teacher.name)
+				$(".class_content .title").html(data.play_data.title)
+				$(".class_content ul").html(data.play_data.content)
+				$(".tx").attr("src", imgUrl + data.teacher.url)
+				$(".name h4").html(data.teacher.name)
+				$(".name span").html(data.teacher.title)
+				$(".guanzhu").html(`${data.is_follow === 1?'已关注':'+关注'}`)
+				for(var i = 0; i < cod.length; i++) {
+					var a=i+1;
+					var stri = ` <li class="${data.play_data.nowid===cod[i].id?'active':''}" id="${cod[i].id}" isplay="${cod[i].is_pay}">
+                        <p>第${toChineseNum(a)}课：${cod[i].name}</p>
+                        <div class="small_icon">
+                            <time>01:30:00</time>
+                            <span>1000+已报名</span>
+                        </div>
+                        <a href="#">
+                            <div class="startPlay"></div>
+                        </a>
+                    </li>`;
+				$(".class_list ul").append(stri)
+				}
+				$('.play').mobileClick(function(){
+	                $('video')[0].play();
+	                $(this).hide();
+	            })
+			}
+		});
 	}
+	$(".guanzhu").mobileClick(function(){
+		var tid=$(this).attr("tid")
+		if($(this).html()=="+关注"){
+			$.ajax({
+				type:"post",
+				url:"http://ceshi.softlinkonline.cn/app.php/add_follow",
+				async:true,
+				dataType:"json",
+				data:{
+					teacherid:num
+				},success:function(data){
+					console.log(data)
+					$(".guanzhu").html("已关注")
+				}
+			});
+		}else{
+			$.ajax({
+				type:"post",
+				url:"http://ceshi.softlinkonline.cn/app.php/del_follow",
+				async:true,
+				dataType:"json",
+				data:{
+					teacherid:num
+				},success:function(data){
+					console.log(data)
+					$(".guanzhu").html("+关注")
+				}
+			});
+		}
+	})
 })

@@ -68,6 +68,13 @@ $(function() {
 			} else {
 				$(".meiyou").show()
 			}
+			if(data.shoucang === 1){
+				$(".suc p").html("已收藏")
+				$(".suc_img img").attr("src",imgUrl+"suc_act.png")
+			}else{
+				$(".suc p").html("收藏")
+				$(".suc_img img").attr("src",imgUrl+"suc.png")
+			}
 			$(".banner img").attr("src", imgUrl + deta.logo)
 			$(".int_tit").html(deta.name)
 			$(".int_p").html(deta.teacher.name)
@@ -104,7 +111,7 @@ $(function() {
 			$(".int_img>img").attr("src", imgUrl + deta.course_desc)
 			for(var i = 0; i < cod.length; i++) {
 				var mathe = i + 1;
-			var codlist =`<div class="cataloga" id="${cod[i].id}" type="${cod[i].type} isplay="${cod[i].is_pay}">
+			var codlist =`<div class="cataloga" id="${cod[i].id}" type="${cod[i].type}" isplay="${cod[i].is_pay}">
 						<div class="cat_tit">课时${mathe}:${cod[i].name}</div>
 						<div class="cat_fot">
 							<a class="cat_time">${timer(cod[i].create_time)}</a>
@@ -117,10 +124,7 @@ $(function() {
 					var typ=$(this).attr("type");
 					var isp=$(this).attr("isplay");
 					console.log(isp);
-					if(typ==1){
-						sessionStorage.setItem("presp_id",$(this).attr("id"))
-						window.location.href="playback.html?id/"+$(this). attr("id")+"/type/2"
-					}else if(isp==1){
+					if(typ==1||isp==1){
 						sessionStorage.setItem("presp_id",$(this).attr("id"))
 						window.location.href="playback.html?id/"+$(this). attr("id")+"/type/2"
 					}else{
@@ -205,5 +209,8 @@ $(function() {
 				}
 			});
 		}
+	})
+	$(".suc").mobileClick(function(){
+		
 	})
 })
