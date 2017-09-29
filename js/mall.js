@@ -70,16 +70,16 @@ $(function () {
 				var str2 = hop[i].kg_price
 				str1 = str1.replace(/^(\d+)\.(\d+)/,function($0,$1,$2){
 					if($2 === '00'){
-						return $1
+						return ' - '+'<a class="small">¥</a>'+$1
 					}
 				})
 //				console.log(str1)
 				str2 = str2.replace(/^(\d+)\.(\d+)/,function($0,$1,$2){
 					if($2 === '00'){
-						return ' - '+'<a class="small">¥</a>'+$1
+						return $1
 					}
 				})
-				var str='<div class="pre_con" id="'+hop[i].id+'"><div class="pre_igm"><img src="'+imgUrl+hop[i].logo+'" /></div><p>'+hop[i].name+'</p><div><strong>讲师名</strong><span><a class="small">¥</a>'+str1+str2+'</span></div></div>';
+				var str='<div class="pre_con" id="'+hop[i].id+'"><div class="pre_igm"><img src="'+imgUrl+hop[i].logo+'" /></div><p>'+hop[i].name+'</p><div><strong>讲师名</strong><span><a class="small">¥</a>'+str2+str1+'</span></div></div>';
 				$(".prese").append(str)
 			}
 			$('.jin .look').mobileClick(function(){

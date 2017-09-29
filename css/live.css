@@ -82,6 +82,10 @@ html {
   border-radius: 50%;
 }
 .teacher_warp .name {
+	width: 7.6rem;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
   padding-top: 0.3rem;
   color: #424242;
   float: left;
