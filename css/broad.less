@@ -34,10 +34,16 @@ span{ cursor: pointer;}
     font-size: 22/@base !important;
 }
 .banner{
-    width: 764/@base;
-    height: 393/@base;
+    width: 750/@base;
+    height: 375/@base;
     box-shadow: 0rem 2/@base 19/@base 0rem rgba(66, 133, 244, 0.27);
     margin-bottom: 20/@base;
+    overflow: hidden;
+}
+.banner img{
+    height: 475/@base;
+    width: 750/@base;
+    margin-top: -50/@base;
 }
 .nav{
     width: 699/@base;
@@ -162,3 +168,92 @@ span{ cursor: pointer;}
    float: left;
    margin-top: 20/@base;
 }
+
+
+.mask{
+    background: rgba(0,0,0,.4);
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: none;
+ }
+ .bombBox{
+    position: fixed;
+    height: 495/@base;
+    width: 699/@base;
+    border-radius: 8/@base;
+    padding: 0 45/@base;
+    box-sizing: border-box;
+    background: #fff;
+    bottom: -19.6rem;
+    left: 25/@base;
+    z-index: 999;
+    transition: all .5s;
+ }
+ .bombBox li{
+    height: 116/@base;
+    line-height: 116/@base;
+    border-bottom: 2/@base solid #dadada;
+    font-size: 32/@base;
+    color: #666;
+ }
+ .bombBox li::after{
+    content: '';
+    clear: both;
+ }
+ .bombBox li span{
+    float: left;
+    padding-left: 50/@base;
+    background: url(../img/yuan.png) no-repeat left 45/@base;
+    background-size: 30/@base 30/@base;
+ }
+ .bombBox li strong{
+    font-weight: normal;
+    float: right;
+ }
+ .bombBox .active{
+    color: #4285f4;
+ }
+ .bombBox .active span{
+    background: url(../img/yuan_xuan.png) no-repeat left 45/@base;
+    background-size: 30/@base 30/@base;
+ }
+ .bombBox .button{
+    width: 609/@base;
+    height: 90/@base;
+    border-radius: 8/@base;
+    line-height: 90/@base;
+    text-align: center;
+    font-size: 32/@base;
+    color: #fff;
+    margin-top: 27/@base;
+ }
+ .youhui{
+    border:none !important;
+ }
+ .youhui.yes{
+    color: #666666;
+ }
+ .youhui.no{
+    color: #bdbdbd;
+ }
+ .youhui.yes span{
+    background: url(../img/quan.png) no-repeat left 40/@base;
+    background-size:0.64rem 37/@base;
+ }
+ .youhui.no span{
+    background: url(../img/no_quan.png) no-repeat left 40/@base;
+    background-size:0.64rem 37/@base;
+ }
+ .bombBox .quan{
+    background: #4285f4;
+ }
+ .bombBox .weixin{
+    background: #00b90c url(../img/weixin.png) no-repeat 201/@base 22/@base ;
+    background-size: 54/@base 43/@base;
+    box-sizing: border-box;
+    padding-left: 60/@base;
+ }
