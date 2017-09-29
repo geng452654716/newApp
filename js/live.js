@@ -155,7 +155,8 @@ $(function () {
                 liveVideo.play();
                 $(fullBtn).show();
                 playVideo = true;
-                setTimeout(function () {
+                var timer = setTimeout(function () {
+                    clearTimeout(timer);
                     $(fullBtn).hide();
                 }, 3000);
             })
@@ -163,7 +164,8 @@ $(function () {
             $(liveCanvas).mobileClick(function () {
                 if (playVideo) {
                     $(fullBtn).show();
-                    setTimeout(function () {
+                    var timer = setTimeout(function () {
+                        clearTimeout(timer);
                         $(fullBtn).hide();
                     }, 3000);
                 }
@@ -194,7 +196,8 @@ $(function () {
                 liveVideo.play();
                 $(fullBtn).show();
                 playVideo = true;
-                setTimeout(function () {
+                var timer = setTimeout(function () {
+                    clearTimeout(timer);
                     $(fullBtn).hide();
                 }, 3000);
             })
@@ -203,7 +206,8 @@ $(function () {
             $(liveVideo).mobileClick(function () {
                 if (playVideo) {
                     $(fullBtn).show();
-                    setTimeout(function () {
+                    var timer = setTimeout(function () {
+                        clearTimeout(timer);
                         $(fullBtn).hide();
                     }, 3000);
                 }
@@ -216,8 +220,8 @@ $(function () {
                     W = innerHeight;
                     liveVideo.style.height = H + 'px';
                     liveVideo.style.width = W + 'px';
-                    this.style.right = 680 / 50 + 'rem';
-                    this.style.bottom = -880 / 50 + 'rem';
+                    this.style.right = 650 / 50 + 'rem';
+                    this.style.bottom = -750 / 50 + 'rem';
                     this.style.backgroundImage = 'url(../img/outfull.png)';
 
 
@@ -226,17 +230,16 @@ $(function () {
                     videoBox.style.background = '#000';
                     videoBox.style.transform = 'rotate(90deg)';
                     videoBox.style.top = -750 / 50 + 'rem';
-                    $('.content').css({
-                        height:innerHeight,
-                        overflow:'hidden',
-                    })
+                    $('.content')[0].style.height = innerHeight + 'px';
+                    $('.content')[0].style.overflow = 'hidden';
                 } else {
                     H = smallH;
                     W = smallW;
                     liveVideo.style.height = smallH + 'px';
                     liveVideo.style.width = smallW + 'px';
                     liveVideo.style.transform = null;
-                    liveVideo.style.top = 0;
+                    liveVideo.style.top = 5/50 +'rem';
+                    liveVideo.style.left = 0/50 + 'rem';
                     this.style.right = 30 / 50 + 'rem';
                     this.style.bottom = 20 / 50 + 'rem';
                     this.style.backgroundImage = 'url(../img/full.png)';
@@ -246,7 +249,8 @@ $(function () {
                     videoBox.style.background = null;
                     videoBox.style.transform = null;
                     videoBox.style.top = 0;
-                    $('.content').css(null)
+                    $('.content')[0].style.height = null;
+                    $('.content')[0].style.overflow = null;
                 }
                 full = !full;
             })
