@@ -37,7 +37,8 @@
         })(750, 50);
     </script>
     <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="https://unpkg.com/better-scroll@1.0.1/dist/bscroll.min.js"></script>
+    <!-- <script src="https://unpkg.com/better-scroll@1.0.1/dist/bscroll.min.js"></script> -->
+    <script src="../js/bscroll.min.js"></script>
     <script src="../js/live.js"></script>
     <script src="../js/public.js"></script>
 </head>
@@ -47,8 +48,13 @@
         <div class="content">
             <!-- 视屏 -->
             <div class="videoWarp">
-                <video src=""></video>
+                <div class="videoBox">
+                    <video id="liveVideo" x5-video-player-type="h5" x5-video-player-fullscreen='true' webkit-playsinline='true' playsinline='true' x-webkit-airplay="true" airplay="allow"  x5-video-orientation="portrait" x-webkit-airplay="allow" src=''></video>
+                </div>
                 <div class="prompt">距离开课还有<span>24</span>分钟</div>
+                <canvas id="liveCanvas"></canvas>
+                <div class="play"></div>
+                <div class="full"></div>
             </div>
             <!-- 讲师 -->
             <div class="teacher_warp">
@@ -100,46 +106,7 @@
             <!-- 课程列表 -->
             <div class="class_list list">
                 <ul>
-                    <li class="active">
-                        <p>第一课：GRE备考整体概述</p>
-                        <div class="small_icon">
-                            <time>01:30:00</time>
-                            <span>1000+已报名</span>
-                        </div>
-                        <a href="#">
-                            <div class="startPlay"></div>
-                        </a>
-                    </li>
-                    <li>
-                        <p>第二课：GRE阅读</p>
-                        <div class="small_icon">
-                            <time>01:30:00</time>
-                            <span>1000+已报名</span>
-                        </div>
-                        <a href="#">
-                            <div class="startPlay"></div>
-                        </a>
-                    </li>
-                    <li>
-                        <p>第三课：GRE填空</p>
-                        <div class="small_icon">
-                            <time>01:30:00</time>
-                            <span>1000+已报名</span>
-                        </div>
-                        <a href="#">
-                            <div class="startPlay"></div>
-                        </a>
-                    </li>
-                    <li>
-                        <p>第四课：GRE写作</p>
-                        <div class="small_icon">
-                            <time>01:30:00</time>
-                            <span>1000+已报名</span>
-                        </div>
-                        <a href="#">
-                            <div class="startPlay"></div>
-                        </a>
-                    </li>
+                    
                 </ul>
             </div>
             <!-- 课程公告 -->

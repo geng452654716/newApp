@@ -82,12 +82,16 @@ $(function(){
 						bottom:25/50 + 'rem'
 					});
 				}
+				//判断按钮状态跳转
 				if(Data.data.ispay !== 2 && Data.data.button === '精彩回放'){
 					window.location.href = 'prespPlay.html?class_id='+ data.data.Catalogdata[0].id;
 				}else if(Data.data.ispay !== 2 && Data.data.button === '直播中'){
-					window.location.href = 'prespPlay.html?class_id='+ data.data.Catalogdata[0].id;
+					window.location.href = 'live.html?class_id='+ data.data.Catalogdata[0].id;
 				}else if(Data.data.ispay !== 2 && Data.data.button === '即将开始'){
-					// data.data.Catalogdata[0].start_time
+					let diff = Time(data.data.Catalogdata[0].start_time);
+					if(diff <= 5 && diff > 0){
+						window.location.href = 'live.html?class_id='+ data.data.Catalogdata[0].id;
+					}
 				}
 			})
 		}
@@ -119,11 +123,19 @@ $(function(){
 	}
 })
 
-Time('2017-09-29 10:37:00')
+
 //时间判断函数
 function Time(start){
 	let nowTime = +new Date();
 	let startTime = +new Date(start);
 	let diff = startTime - nowTime;
-	
+	if(diff > 0){
+		var day = Math.floor(diff / 1000 / 60 / 60 / 24);
+		var hour = Math.floor(diff / 1000 / 60 / 60 % 24);
+		var min = Math.floor(diff / 1000 / 60 % 60);
+		var sec = Math.floor(diff / 1000 % 60);
+		return min;
+	}else{
+		return -1;
+	}
 }

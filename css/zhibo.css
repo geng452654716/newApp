@@ -80,6 +80,20 @@ body {
   top: 0.5rem;
   right: 0.5rem;
 }
+.zhi_tu .ban_shi {
+  text-indent: 0.8rem;
+  width: 2.66rem;
+  height: 0.76rem;
+  line-height: 0.74rem;
+  color: white;
+  border-radius: 0.38rem;
+  font-size: 0.44rem;
+  border: 0.02rem solid rgba(255, 255, 255, 0.3);
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+}
 .huifang {
   background: url(../img/huifang.png) no-repeat rgba(0, 0, 0, 0.3) 0.32rem 0.16rem;
   background-size: 0.22rem 0.32rem;
@@ -201,7 +215,7 @@ body {
   width: 1.7rem;
   height: 0.68rem;
   border: 0.02rem solid rgba(255, 255, 255, 0.3);
-  line-height: 0.68rem;
+  line-height: 0.6rem;
   position: absolute;
   top: 0.34rem;
   right: 0.34rem;

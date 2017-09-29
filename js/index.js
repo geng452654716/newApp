@@ -41,6 +41,35 @@ $(function () {
 				$('.banner').html(str);
 			}
 			if(data.data.hf_course_live){
+				//添加直播课程
+				let div = document.createElement('div');
+				let Data = data.data.course_live;
+				div.class_id = Data.id;
+				div.className = 'zhi_son';
+				let liveStr = `
+					<div class="zhi_tu">
+						<img src="${imgUrl + Data.weblogo}">
+						<span class='ban_shi jijiang'>${Data.zb_text}</span>
+					</div>
+					<div class="gao_tit">
+						${Data.name}
+					</div>
+					<div class="gao_p">
+						${Data.start_time}
+					</div>
+					<div class="gao_xin">
+						<span>套课:${Data.count}课时</span>
+						<p>
+							${Data.price === '0.00'?'<a>免费</a>':'<a class="small">¥</a>6'}
+							${Data.zd_price?'-':''}
+							${Data.zd_price?`<a class="small">¥</a>${Data.zd_price}`:''}
+						</p>
+					</div>
+					<div class="ban_bao">1000人报名</div>
+				`
+				div.innerHTML = liveStr;
+				$('.details').append(div);
+				//添加回放课程
 				data.data.hf_course_live.map((e,i) => {
 					let div = document.createElement('div');
 					div.class_id = e.id;
