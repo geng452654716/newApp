@@ -19,14 +19,14 @@ $(function () {
 	var luboChild = lubo.children;
 	lubo.style.width = luboChild.length * 73 + '%';
 
-	document.addEventListener('click', function () {
+	document.addEventListener('touchstart', function (e) {
 		scroll.refresh();
 	})
-	$(".qian")[0].addEventListener('touchstart',function () {
+	$(".qian").mobileClick(function () {
 		$(".bg").show()
 		$(".coupon").show()
 	})
-	$(".cuo")[0].addEventListener('touchstart',function () {
+	$(".cuo").mobileClick(function () {
 		$(".bg").hide()
 		$(".coupon").hide()
 		$(".cou_one").show()
@@ -35,26 +35,26 @@ $(function () {
 		$(".cou_thr").hide()
 		$(".coupon").css({ "height": "10.673913043478262rem" });
 	})
-	$(".doubt")[0].addEventListener('touchstart',function () {
+	$(".doubt").mobileClick(function () {
 		$(".cou_one").hide()
 		$(".cou_thr").hide()
 		$(".doubt").hide()
 		$(".cou_two").show()
 		$(".coupon").css({ "height": "10.673913043478262rem" })
 	})
-	$(".rightoff")[0].addEventListener('touchstart',function () {
+	$(".rightoff").mobileClick(function () {
 		$(".cou_one").hide()
 		$(".cou_two").hide()
 		$(".cou_thr").show()
 		$(".coupon").css({ "height": "4.673913rem" })
 	})
-	$(".Boutique")[0].addEventListener('touchstart',function () {
+	$(".Boutique").mobileClick(function () {
 		window.location.href = "boutique.html"
 	})
-	$(".dataset")[0].addEventListener('touchstart',function () {
+	$(".dataset").mobileClick(function () {
 		window.location.href = "dataset.html"
 	})
-	$(".morev")[0].addEventListener('touchstart',function () {
+	$(".morev").mobileClick(function () {
 		window.location.href = "Micro.html"
 	})
 	$.ajax({
@@ -81,15 +81,13 @@ $(function () {
 				})
 				var str='<div class="pre_con" id="'+hop[i].id+'"><div class="pre_igm"><img src="'+imgUrl+hop[i].logo+'" /></div><p>'+hop[i].name+'</p><div><strong>讲师名</strong><span><a class="small">¥</a>'+str1+str2+'</span></div></div>';
 				$(".prese").append(str)
-				
 			}
+			$('.jin .look').mobileClick(function(){
+				window.location.href="boutique.html"
+			})
+			$('.pre_con').mobileClick(function(){
+				window.location.href = "details.html?id/"+$(this).attr("id")
+			})
 		}
 	});	
-	$(document).on("touchend",".jin .look",function(){
-		window.location.href="boutique.html"
-	})
-	
-	$(document).on("touchend", ".pre_con", function () {
-		window.location.href = "details.html?id/"+$(this).attr("id")
-	})
 })

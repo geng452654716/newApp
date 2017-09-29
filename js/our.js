@@ -39,7 +39,6 @@ $(function(){
 			window.location.href="userdata.html"
 		}else{
 			window.location.href="signin.html"
-			collection.html
 		}
 	})
 	$('.collection')[0].addEventListener('touchstart',function() {

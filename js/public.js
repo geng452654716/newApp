@@ -64,3 +64,41 @@ function getCookie(key){
 function removeCookie(key,value) {
     setCookie(key,value,-1);
 }
+
+//全局状态，关注数量
+ajax('app.php/follow_list',function(data){
+    if(data.rt === 1){
+        const Data = data.data.follow_list;
+        if(Data){
+            sessionStorage.setItem('followList_length',Data.length);
+        }else{
+            sessionStorage.setItem('followList_length',0);
+        }
+    }
+},{},'post')
+
+//移动端click事件封装
+$.fn.extend({
+    mobileClick(callback=function(e){}){
+        this.startX = null;
+        this.startY = null;
+        this.endX = null;
+        this.endY = null;
+        let _this = this;
+        $.each(this,function(i,e){
+            e.addEventListener('touchstart',function(e){
+                this.startX = e.changedTouches[0].clientX;
+                this.startY = e.changedTouches[0].clientY;
+            })
+            e.addEventListener('touchend',function(e){
+                this.endX = e.changedTouches[0].clientX;
+                this.endY = e.changedTouches[0].clientY;
+                if(Math.abs(this.startX - this.endX) < 30 && Math.abs(this.startY - this.endY) < 30){
+                    callback(e);
+                }
+            })
+        })
+        
+        return this;
+    }
+})

@@ -38,7 +38,7 @@ span {
   color: #4285F4 !important;
 }
 .small {
-  font-size: 0.64rem !important;
+  font-size: 0.44rem !important;
 }
 .banner {
   width: 15.28rem;
@@ -82,15 +82,20 @@ span {
   color: #4c4c4c;
   margin-top: 0.1rem;
 }
+.int_p p {
+  float: left;
+  margin-right: 0.5rem;
+}
 .int_foot {
   width: 100%;
   overflow: hidden;
 }
 .int_zi {
   float: left;
-  font-size: 1.1rem;
+  font-size: 0.76rem;
   color: #ffa100;
   margin-right: 0.3rem;
+  margin-top: 0.2rem;
 }
 .int_peo {
   float: left;
@@ -155,14 +160,12 @@ span {
 .int_p span {
   color: #4285F4;
   border: 1px solid #4285F4;
-  float: right;
-  margin-right: 10rem;
-  margin-top: 0.36rem;
   height: 0.68rem;
-  display: block;
   font-size: 0.4rem;
   text-align: center;
   line-height: 0.68rem;
   border-radius: 0.06rem;
   padding: 0 0.06rem;
+  float: left;
+  margin-top: 0.4rem;
 }

@@ -136,13 +136,14 @@ input[type=text] {
   margin-bottom: 0.2rem;
 }
 #inp {
-  width: 9.74rem;
-  height: 1.24rem;
-  border: 1px solid #ccc;
-  margin-right: 0.24rem;
-  border-radius: 0.1rem;
-  text-indent: 0.2rem;
-  float: left;
+     width: 9.74rem;
+    height: 1.2rem;
+    border: 1px solid #ccc;
+    margin-right: 0.2rem;
+    border-radius: 0.1rem;
+    text-indent: 0.2rem;
+    float: left;
+    font-size: 0.48rem;
 }
 #btn {
 	float: left;
