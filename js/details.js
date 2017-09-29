@@ -14,30 +14,10 @@ $(function(){
 	$('.bao_rt')[0].addEventListener('touchstart',function(){
 		$('.mask').show();
 		$('.bombBox').css({
-			bottom:'0.5333333333333333rem'
+			bottom:25/50 + 'rem'
 		});
 	})
 	changeYouHui();
-	imgUrl="http://oss.softlinkonline.cn/pcimg/";
-	function timer(dat){
-		var t=dat*1000;
-		var hour = Math.floor(t / 1000 / 60 / 60 % 24);
-		var min = Math.floor(t / 1000 / 60 % 60);
-		var sec = Math.floor(t / 1000 % 60);
-		/*console.log(min)
-		console.log(sec)*/
-		if(hour < 10) {
-			hour = "0" + hour;
-		}
-		if(min < 10) {
-			min = +min;
-		}
-		if(sec < 10) {
-			sec = sec;
-		}
-		var yi=hour+":"+min+":"+sec
-		return yi
-	}
 	var you = true;
 	$('.youhui')[0].addEventListener('touchstart',function(){
 		you = !you;
@@ -142,4 +122,22 @@ $(function(){
 			}
 		}
 	});
+
+	function timer(dat){
+		var t=dat*1000;
+		var hour = Math.floor(t / 1000 / 60 / 60 % 24);
+		var min = Math.floor(t / 1000 / 60 % 60);
+		var sec = Math.floor(t / 1000 % 60);
+		if(hour < 10) {
+			hour = "0" + hour;
+		}
+		if(min < 10) {
+			min = +min;
+		}
+		if(sec < 10) {
+			sec = sec;
+		}
+		var yi=hour+":"+min+":"+sec
+		return yi
+	}
 })

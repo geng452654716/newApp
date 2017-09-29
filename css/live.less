@@ -21,6 +21,7 @@ body,html{
     position: relative;
     video{
         height: 420/@base;
+        width: 100%;
     }
     .prompt{
         position: absolute;
@@ -35,6 +36,16 @@ body,html{
             color: @blue;
             font-size: 48/@base;
         }
+    }
+    .play{
+        position: absolute;
+        background: url(../img/video_play.png) no-repeat;
+        height: 120/@base;
+        width: 120/@base;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        background-size: 120/@base 120/@base;
     }
 }
 //老师介绍
@@ -184,11 +195,11 @@ body,html{
         }
         time{
             background: url(../img/zhibo_bo.png) no-repeat left center;
-            background-size: 20px 20px;
+            background-size: 20/@base 20/@base;
         }
         span{
             background: url(../img/zhibo_ren.png) no-repeat left center;
-            background-size: 20px 20px; 
+            background-size: 20/@base 20/@base; 
         }
         span,time{
             margin-right: 53/@base;

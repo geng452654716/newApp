@@ -20,6 +20,7 @@ html {
 }
 .videoWarp video {
   height: 8.4rem;
+  width: 100%;
 }
 .videoWarp .prompt {
   position: absolute;
@@ -34,6 +35,16 @@ html {
 .videoWarp .prompt span {
   color: #4285f4;
   font-size: 0.96rem;
+}
+.videoWarp .play {
+  position: absolute;
+  background: url(../img/video_play.png) no-repeat;
+  height: 2.4rem;
+  width: 2.4rem;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-size: 2.4rem 2.4rem;
 }
 .teacher_warp {
   padding: 0.6rem 0.6rem 0.8rem;
@@ -180,11 +191,11 @@ html {
 }
 .class_list li time {
   background: url(../img/zhibo_bo.png) no-repeat left center;
-  background-size: 20px 20px;
+  background-size: 0.4rem 0.4rem;
 }
 .class_list li span {
   background: url(../img/zhibo_ren.png) no-repeat left center;
-  background-size: 20px 20px;
+  background-size: 0.4rem 0.4rem;
 }
 .class_list li span,
 .class_list li time {
