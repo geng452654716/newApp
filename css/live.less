@@ -19,9 +19,28 @@ body,html{
     height: 420/@base;
     background: #191919;
     position: relative;
+    .videoBox{
+        transform-origin: left bottom;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 99;        
+    }
     video{
         height: 420/@base;
         width: 100%;
+        transform-origin: left bottom;
+        position: absolute;
+        left: -12/@base;
+        top: 0;
+        z-index: 99;
+    }
+    canvas{
+        transform-origin: left bottom;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 99;
     }
     .prompt{
         position: absolute;
@@ -31,7 +50,11 @@ body,html{
         font-size:34/@base;
         color: #fff;
         height: 60/@base;
-        line-height: 60/@base;
+        line-height: 35/@base;
+        background: url(../img/time.png) no-repeat;
+        padding-left: 80/@base;
+        box-sizing: border-box;
+        width: 450/@base;
         span{
             color: @blue;
             font-size: 48/@base;
@@ -46,6 +69,17 @@ body,html{
         top: 50%;
         transform: translate(-50%,-50%);
         background-size: 120/@base 120/@base;
+        z-index: 999;
+    }
+    .full{
+        position: absolute;
+        background: url(../img/full.png) no-repeat center center;
+        background-size: 36/@base 38/@base;
+        width: 50/@base;
+        height: 50/@base;
+        right: 30/@base;
+        bottom: 20/@base;
+        z-index: 999;
     }
 }
 //老师介绍
@@ -87,6 +121,7 @@ body,html{
         padding-top: 15/@base;
         color: #424242;
         float: left;
+        width: 388/@base;
         h4{
             font-weight: normal;
             font-size: 26/@base;
@@ -94,9 +129,13 @@ body,html{
             line-height: 45/@base;
         }
         span{
+            width: 388/@base;
             font-size: 26/@base;
             display: block;
             line-height: 45/@base;
+            overflow: hidden;
+            text-overflow:ellipsis;
+            white-space: nowrap;
         }
     }
     .guanzhu{
@@ -186,6 +225,10 @@ body,html{
             color: #424242;
             font-size: 30/@base;
             line-height: 54/@base;
+            width:90%;
+            overflow: hidden;    
+            text-overflow:ellipsis;    
+            white-space: nowrap; 
         }
         .small_icon{
             display: block;

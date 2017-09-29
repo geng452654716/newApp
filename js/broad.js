@@ -1,4 +1,5 @@
 $(function(){
+
 	let id = '' + window.location.search.substr(1).split('=')[1];
 
 	ajax('app.php/app_live_details',function(data){
@@ -17,6 +18,7 @@ $(function(){
 					return `<a class="small">¥</a>${$1}.<span style='font-size:${28/50}rem'>${$2}</span>`;
 				}
 			})
+
 			if(endMoney){
 				endMoney = endMoney.replace(/^(\d+)\.(\d+)/,function($0,$1,$2){
 					if($1 !== '0' && $2 ==='00'){
@@ -29,6 +31,7 @@ $(function(){
 			}else{
 				endMoney = '';
 			}
+
 			let str = `
 				<div class="banner"><img src="${imgUrl + Data.data.logo}"></div>
 				<div class="bro_tit">课程信息
@@ -79,12 +82,16 @@ $(function(){
 						bottom:25/50 + 'rem'
 					});
 				}
-				if(Data.data.button === '精彩回放'){
-					window.location.href = 'prespPlay.html?class_id='+data.data.Catalogdata[0].id;
-				}else if(Data.data.button === '直播中'){
-
-				}else if(Data.data.button === '即将开始'){
-
+				//判断按钮状态跳转
+				if(Data.data.ispay !== 2 && Data.data.button === '精彩回放'){
+					window.location.href = 'prespPlay.html?class_id='+ data.data.Catalogdata[0].id;
+				}else if(Data.data.ispay !== 2 && Data.data.button === '直播中'){
+					window.location.href = 'live.html?class_id='+ data.data.Catalogdata[0].id;
+				}else if(Data.data.ispay !== 2 && Data.data.button === '即将开始'){
+					let diff = Time(data.data.Catalogdata[0].start_time);
+					if(diff <= 5 && diff > 0){
+						window.location.href = 'live.html?class_id='+ data.data.Catalogdata[0].id;
+					}
 				}
 			})
 		}
@@ -115,3 +122,20 @@ $(function(){
 		}
 	}
 })
+
+
+//时间判断函数
+function Time(start){
+	let nowTime = +new Date();
+	let startTime = +new Date(start);
+	let diff = startTime - nowTime;
+	if(diff > 0){
+		var day = Math.floor(diff / 1000 / 60 / 60 / 24);
+		var hour = Math.floor(diff / 1000 / 60 / 60 % 24);
+		var min = Math.floor(diff / 1000 / 60 % 60);
+		var sec = Math.floor(diff / 1000 % 60);
+		return min;
+	}else{
+		return -1;
+	}
+}
