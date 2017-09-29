@@ -1,6 +1,6 @@
 $(function () {
 	$(document).on("click", ".banner", function () {
-		window.location.href = "../index/broadcast.html"
+		window.location.href = "../index/broadcast.html?class_id=" + this.class_id;
 	})
 	$(document).on("click", ".zhi_son", function () {
 		window.location.href = "../index/broadcast.html?class_id=" + this.class_id;
@@ -37,6 +37,7 @@ $(function () {
 					</div>
 					<div class="ban_bao">1000人已报名</div>
 				`;
+				$('.banner')[0].class_id = Data.id;
 				$('.banner').html(str);
 			}
 			if(data.data.hf_course_live){

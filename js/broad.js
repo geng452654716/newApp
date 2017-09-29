@@ -1,14 +1,12 @@
 $(function(){
+
 	let id = '' + window.location.search.substr(1).split('=')[1];
 
 	ajax('app.php/app_live_details',function(data){
 		if(data.rt === 1){
 			let Data = data.data;
 			let money = Data.data.price;
-<<<<<<< HEAD
-=======
 			let endMoney = Data.data.start_price;
->>>>>>> origin/master
 			money = money.replace(/^(\d+)\.(\d+)/,function($0,$1,$2){
 				if($1 === '0' && $2 === '00'){
 					return '免费';
@@ -20,9 +18,6 @@ $(function(){
 					return `<a class="small">¥</a>${$1}.<span style='font-size:${28/50}rem'>${$2}</span>`;
 				}
 			})
-<<<<<<< HEAD
-			console.log(money);
-=======
 
 			if(endMoney){
 				endMoney = endMoney.replace(/^(\d+)\.(\d+)/,function($0,$1,$2){
@@ -37,7 +32,6 @@ $(function(){
 				endMoney = '';
 			}
 
->>>>>>> origin/master
 			let str = `
 				<div class="banner"><img src="${imgUrl + Data.data.logo}"></div>
 				<div class="bro_tit">课程信息
@@ -49,20 +43,12 @@ $(function(){
 						</div>
 						<div class="int_p">
 							<p>${Data.teacher.name}</p>
-<<<<<<< HEAD
-							<span>套课：5课时</span>
-=======
 							<span>套课：${Data.data.count}课时</span>
->>>>>>> origin/master
 						</div>
 						<div class="int_foot">
 							<div class="int_zi">
 								${money}
-<<<<<<< HEAD
-							
-=======
 								${endMoney}
->>>>>>> origin/master
 							</div>
 							<div class="int_peo">1000人报名</div>
 						</div>
@@ -70,11 +56,6 @@ $(function(){
 					</div>
 					<div class="int_img"><img src="${imgUrl + Data.data.course_desc}"></div>
 				</ul>
-<<<<<<< HEAD
-				<div class="bao">${Data.data.button}</div>
-			`
-			$('.content').html(str);
-=======
 			`
 			$('.bao').html(`${Data.data.ispay === 2?'立即报名':Data.data.button}`)
 			$('.content').html(str);
@@ -101,15 +82,14 @@ $(function(){
 						bottom:25/50 + 'rem'
 					});
 				}
-				if(Data.data.button === '精彩回放'){
-					window.location.href = 'prespPlay.html?class_id='+data.data.Catalogdata[0].id;
-				}else if(Data.data.button === '直播中'){
-
-				}else if(Data.data.button === '即将开始'){
-
+				if(Data.data.ispay !== 2 && Data.data.button === '精彩回放'){
+					window.location.href = 'prespPlay.html?class_id='+ data.data.Catalogdata[0].id;
+				}else if(Data.data.ispay !== 2 && Data.data.button === '直播中'){
+					window.location.href = 'prespPlay.html?class_id='+ data.data.Catalogdata[0].id;
+				}else if(Data.data.ispay !== 2 && Data.data.button === '即将开始'){
+					// data.data.Catalogdata[0].start_time
 				}
 			})
->>>>>>> origin/master
 		}
 	},{id},'post')
 	changeYouHui();
@@ -138,3 +118,12 @@ $(function(){
 		}
 	}
 })
+
+Time('2017-09-29 10:37:00')
+//时间判断函数
+function Time(start){
+	let nowTime = +new Date();
+	let startTime = +new Date(start);
+	let diff = startTime - nowTime;
+	
+}

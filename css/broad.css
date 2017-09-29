@@ -76,9 +76,13 @@ span {
 .int_tit {
   margin-top: 0.6rem;
   width: 11.68rem;
-  height: 0.68rem;
+  height: 0.8rem;
   color: #333333;
   font-size: 0.68rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 0.8rem;
 }
 .int_p {
   width: 100%;

@@ -95,11 +95,7 @@ $.fn.extend({
                 this.endX = e.changedTouches[0].clientX;
                 this.endY = e.changedTouches[0].clientY;
                 if(Math.abs(this.startX - this.endX) < 30 && Math.abs(this.startY - this.endY) < 30){
-<<<<<<< HEAD
-                    callback(e);
-=======
                     callback.call(this,e);
->>>>>>> origin/master
                 }
             })
         })
