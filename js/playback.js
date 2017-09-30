@@ -28,7 +28,6 @@ $(function() {
 	var ac = str.lastIndexOf("d/")
 	var lo = str.lastIndexOf("/type")
 	var num = str.substring(ac + 2, lo)
-	console.log(type)
 	if(type == 2) {
 		$.ajax({
 			type: "post",

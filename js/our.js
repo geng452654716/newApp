@@ -48,7 +48,13 @@ $(function(){
 			window.location.href="signin.html"
 		}
 	})
-
+	$('.user').mobileClick(function(){
+		if(user){
+			window.location.href="collection.html"
+		}else{
+			window.location.href="signin.html"
+		}
+	})
 	if(user){
 		$('.userInfo').html(user);
 	}else{

@@ -1,4 +1,5 @@
 $(function () {
+    
     $(document).on('click', '.nav div', function () {
         $('.list').hide();
         $('.list').eq($(this).index()).show();
@@ -8,7 +9,7 @@ $(function () {
 
     //课程id
     let id = '' + window.location.search.substr(1).split('=')[1];
-
+    let currentTime = 0;
 
     //请求视频数据
     ajax('app.php/app_live_play', function (data) {
@@ -16,12 +17,9 @@ $(function () {
             const Class = data.data.zb_sel_class;
             const classList = data.data.web_class_list;
             const teacher = data.data.teacher_data;
+            currentTime = Class.counttime
             //视频
             $('video').attr('src', 'http://oss.softlinkonline.cn/public/' + Class.video_url);
-            $('.play').mobileClick(function () {
-                $('video')[0].play();
-                $(this).hide();
-            })
             //讲师
             let str = `
             <div class="title">
@@ -83,11 +81,83 @@ $(function () {
                     }, { teacherid: teacher.id }, 'post')
                 }
             })
+            var timer = null;
+
+            $.ajax({type:"OPTIONS",url:"/",complete:function(x){
+                var serveTime = x.getResponseHeader('Date');
+                var nowDate = new Date(serveTime);
+                var startDate = new Date(Class.start_time * 1000);
+                var diffDate = startDate - nowDate;
+                var total = diffDate / 1000 + 2;
+                timer = setInterval(function () {
+                    var changeDiffDate = StoH(total);
+                    var M = changeDiffDate.min;
+                    var S = changeDiffDate.sec;
+                    if (total > 0) {
+                        $('.prompt').show();
+                        $('.prompt .m').text(toTow(M));
+                        $('.prompt .s').text(toTow(S));
+                        total--;
+                    } else {
+                        clearInterval(timer);
+                        $('.play').show();
+                        $('.prompt').hide();
+                    }
+                }, 1000)
+            }})
+            //倒计时
+            
+
+            //二维码
+            $('.saoma img').attr('src', `${imgUrl + data.data.data_details.notice}`);
         }
     }, { id }, 'post')
-
     videoPlay();
+    class Video {
+        constructor(src) {
+            this.video = liveVideo;
+            this.status = null; //播放状态
+            this.delay = 50;
+        }
+        play() {
+            this.status = "playing";
+            this.video.play();
+            return this;
+        }
+        pause() {
+            this.status = "paused";
+            this.video.pause();
+            return this;
+        }
+        setTime(time) {
+            if (this.status == "playing") {
+                this.video.currentTime = time;
+                console.log("当前视频时间：" + this.video.currentTime);
+                return time;
+            }
+            let that = this;
+            that.play();
+            $(that.video).one("playing", function () {
+                that.video.currentTime = time;
+                $(that.video).one("seeked", function () {
+                    $(that.video).one("timeupdate", function () {
+                        clearTimeout(that.timeout);
+                        that.timeout = setTimeout(() => {
+                            console.log("当前视频时间：" + that.video.currentTime);
+                            if (that.status == "playing") {
+                                that.play();
+                            } else {
+                                that.pause();
+                            }
+                        }, that.delay);
+                    });
+                })
+            })
+            return time;
+        }
+    }
 
+    var newTime = new Video();
     function videoPlay() {
         //获取video
         var liveVideo = document.getElementById("liveVideo");
@@ -108,9 +178,8 @@ $(function () {
         var W = smallW;
         var full = false;
         var playVideo = false;
+        play.style.display = 'none';
         fullBtn.style.display = 'none';
-
-        // alert(window.navigator.userAgent);
 
         const navgigator = window.navigator.userAgent.toLowerCase();
 
@@ -119,7 +188,6 @@ $(function () {
         } else {
             Android()
         }
-
         function Android() {
             liveVideo.style.display = 'none';
             liveCanvas.height = smallH;
@@ -138,23 +206,29 @@ $(function () {
                 clearInterval(bLiveVideoTimer);
                 liveCanvas.style.transform = null;
                 $('.play').show();
-                smallVideo();
+                smallVideo(liveCanvas);
                 $(fullBtn).hide();
                 playVideo = false;
             }, false);
-
             //监听结束
             liveVideo.addEventListener('ended', function () {
                 clearInterval(bLiveVideoTimer);
-                smallVideo();
+                smallVideo(liveCanvas);
                 playVideo = false;
             }, false);
 
+            // liveVideo.addEventListener('loadedmetadata', function () {
+            //     liveVideo.play();
+            //     liveVideo.currentTime = 200;
+            //     liveVideo.pause();
+            // })
             //开始播放
             $(play).mobileClick(function () {
                 liveVideo.play();
                 $(fullBtn).show();
+                $(this).hide();
                 playVideo = true;
+                newTime.setTime(200)
                 var timer = setTimeout(function () {
                     clearTimeout(timer);
                     $(fullBtn).hide();
@@ -190,12 +264,15 @@ $(function () {
         }
 
         function iphone() {
+            // liveVideo.style.height = smallH + 'px';
+            // liveVideo.style.width = smallW + 'px'
             $(liveCanvas).hide();
             //开始播放
             $(play).mobileClick(function () {
-                liveVideo.play();
                 $(fullBtn).show();
                 playVideo = true;
+                $(this).hide();
+                newTime.setTime(200)
                 var timer = setTimeout(function () {
                     clearTimeout(timer);
                     $(fullBtn).hide();
@@ -238,8 +315,8 @@ $(function () {
                     liveVideo.style.height = smallH + 'px';
                     liveVideo.style.width = smallW + 'px';
                     liveVideo.style.transform = null;
-                    liveVideo.style.top = 5/50 +'rem';
-                    liveVideo.style.left = 0/50 + 'rem';
+                    liveVideo.style.top = 5 / 50 + 'rem';
+                    liveVideo.style.left = 0 / 50 + 'rem';
                     this.style.right = 30 / 50 + 'rem';
                     this.style.bottom = 20 / 50 + 'rem';
                     this.style.backgroundImage = 'url(../img/full.png)';
@@ -278,10 +355,11 @@ function videoStartTime(start) {
     let startM = startTime.getMinutes();
     let startS = startTime.getSeconds();
     return toTow(startH) + ':' + toTow(startM) + ':' + toTow(startS);
-    //补零函数
-    function toTow(num) {
-        return num < 10 ? '0' + num : num;
-    }
+}
+
+//补零函数
+function toTow(num) {
+    return num < 10 ? '0' + num : num;
 }
 
 //阿拉伯数字转中文数字
@@ -300,4 +378,16 @@ function toChineseNum(str) {
             return (match[$1] && ($1 < 10 ? (match[$1] + '千') : match[$1])) + (match[$2] && ($2 < 10 ? (match[$2] + '百') : match[$2])) + (match[$3] && ($3 < 10 ? ($3 == 1 ? '十' : (match[$3] + '十')) : match[$3])) + (match[$4] && match[$4]);
         }) + prefix) : (prefix);
     }).replace(/^零*/g, '').replace(/零*$/g, '').replace(/(零)*/g, '$1').replace(/零亿/g, '亿') || match[10]; //处理连续零的问题
+}
+
+
+//秒转时分秒
+function StoH(s) {
+    var day = Math.floor(s / 60 / 60 / 24);
+    var hour = Math.floor(s / 60 / 60 % 24);
+    var min = Math.floor(s / 60 % 60);
+    var sec = Math.floor(s % 60);
+    return {
+        day, hour, min, sec
+    }
 }

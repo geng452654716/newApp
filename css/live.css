@@ -30,7 +30,7 @@ html {
   width: 100%;
   transform-origin: left bottom;
   position: absolute;
-  left: -0.24rem;
+  left: 0rem;
   top: 0;
   z-index: 99;
 }
@@ -51,9 +51,10 @@ html {
   height: 1.2rem;
   line-height: 0.7rem;
   background: url(../img/time.png) no-repeat;
-  padding-left: 1.6rem;
+  padding-left: 1.2rem;
   box-sizing: border-box;
-  width: 9rem;
+  width: 9.4rem;
+  display: none;
 }
 .videoWarp .prompt span {
   color: #4285f4;
@@ -116,10 +117,6 @@ html {
   border-radius: 50%;
 }
 .teacher_warp .name {
-	width: 7.6rem;
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
   padding-top: 0.3rem;
   color: #424242;
   float: left;

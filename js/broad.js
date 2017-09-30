@@ -1,5 +1,4 @@
 $(function(){
-
 	let id = '' + window.location.search.substr(1).split('=')[1];
 
 	ajax('app.php/app_live_details',function(data){
@@ -7,6 +6,7 @@ $(function(){
 			let Data = data.data;
 			let money = Data.data.price;
 			let endMoney = Data.data.start_price;
+			var comTime = data.data.Catalogdata[0].start_time.replace(/\s/,'T');
 			money = money.replace(/^(\d+)\.(\d+)/,function($0,$1,$2){
 				if($1 === '0' && $2 === '00'){
 					return '免费';
@@ -22,10 +22,10 @@ $(function(){
 			if(endMoney){
 				endMoney = endMoney.replace(/^(\d+)\.(\d+)/,function($0,$1,$2){
 					if($1 !== '0' && $2 ==='00'){
-						return '- <a class="small">¥</a>' + $1;
+						return '<a class="small">¥</a>' + $1 + ' -';
 					}
 					if($1 !== '0' && $2 !== '00'){
-						return `- <a class="small">¥</a>${$1}.<span style='font-size:${28/50}rem'>${$2}</span>`;
+						return `<a class="small">¥</a>${$1}.<span style='font-size:${28/50}rem'>${$2}</span> -`;
 					}
 				})
 			}else{
@@ -47,8 +47,8 @@ $(function(){
 						</div>
 						<div class="int_foot">
 							<div class="int_zi">
-								${money}
 								${endMoney}
+								${money}
 							</div>
 							<div class="int_peo">1000人报名</div>
 						</div>
@@ -83,17 +83,31 @@ $(function(){
 					});
 				}
 				//判断按钮状态跳转
-				if(Data.data.ispay !== 2 && Data.data.button === '精彩回放'){
+				if(Data.data.ispay !== 2 && Data.data.button === '回放'){
 					window.location.href = 'prespPlay.html?class_id='+ data.data.Catalogdata[0].id;
 				}else if(Data.data.ispay !== 2 && Data.data.button === '直播中'){
 					window.location.href = 'live.html?class_id='+ data.data.Catalogdata[0].id;
 				}else if(Data.data.ispay !== 2 && Data.data.button === '即将开始'){
-					let diff = Time(data.data.Catalogdata[0].start_time);
-					if(diff <= 5 && diff > 0){
+					let diff = Time(comTime);
+					if(diff <= 5 && diff >= 0){
 						window.location.href = 'live.html?class_id='+ data.data.Catalogdata[0].id;
 					}
 				}
 			})
+			if(Data.data.ispay !== 2 && Data.data.button === '即将开始'){
+				let diff = Time(comTime);
+				if(diff <= 5 && diff >= 0){
+					$('.bao').css({
+						background:'#ffa100',
+						color:'#fff'
+					})
+				}
+			}else if(Data.data.ispay !== 2 && Data.data.button === '直播中'){
+				$('.bao').css({
+					background:'#ffa100',
+					color:'#fff'
+				})
+			}
 		}
 	},{id},'post')
 	changeYouHui();
@@ -126,8 +140,8 @@ $(function(){
 
 //时间判断函数
 function Time(start){
-	let nowTime = +new Date();
-	let startTime = +new Date(start);
+	let nowTime = new Date(getServerDate());
+	let startTime = new Date(start).getTime();
 	let diff = startTime - nowTime;
 	if(diff > 0){
 		var day = Math.floor(diff / 1000 / 60 / 60 / 24);
@@ -138,4 +152,9 @@ function Time(start){
 	}else{
 		return -1;
 	}
+}
+
+//获取服务器时间
+function getServerDate() {
+    return new Date($.ajax({ async: false }).getResponseHeader("Date"));
 }

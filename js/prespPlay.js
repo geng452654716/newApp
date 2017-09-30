@@ -20,6 +20,15 @@ $(function() {
                 $('video')[0].play();
                 $(this).hide();
             })
+            //视屏播放时隐藏播放按钮
+            $('video')[0].addEventListener('play', function () {
+                $('.play').hide();
+            }, false);
+
+            //视屏暂停使用显示播放按钮
+            $('video')[0].addEventListener('pause', function () {
+                $('.play').show();
+            }, false);
             //讲师
             let str = `
             <div class="title">
